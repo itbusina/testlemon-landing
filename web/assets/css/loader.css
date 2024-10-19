@@ -7,41 +7,25 @@
     }
 }
 
-@media (min-width: 540px) {
+@media (min-width: 960px) {
     .loader {
-        width: 100px !important;
-        min-width: 100px !important;
-        height: 100px !important;
-        min-width: 100px !important;
+        display: block !important;
+        width: 400px !important;
+        min-width: 400px !important;
+        height: 400px !important;
+        min-width: 400px !important;
         border-radius: 50%;
-        border-width: 15px !important;
+        border-width: 50px !important;
         border: 15px solid; /* General border for the loader */
         border-top-color: transparent; /* The top part is transparent to create the spin illusion */
-        animation: spin 3s linear infinite;
+        animation: spin 10s linear infinite;
         position: relative;
         cursor: pointer;
     }
 }
 
 .loader {
-    width: 40px;
-    min-width: 40px;
-    height: 40px;
-    min-width: 40px;
-    border-radius: 50%;
-    border: 5px solid; /* General border for the loader */
-    border-top-color: transparent; /* The top part is transparent to create the spin illusion */
-    animation: spin 3s linear infinite;
-    position: relative;
-    cursor: pointer;
-}
-
-.pause.loader {
-    animation: none;
-}
-
-.run.loader {
-    animation: spin 0.5s linear infinite;
+    display: none;
 }
 
 .loader::before {
@@ -56,37 +40,10 @@
 }
 
 .primary.loader {
-    border-color:  rgba(255, 202, 28, 0.2);
-    border-top-color: rgb(255, 202, 28);
-}
-
-.success.loader {
-    border-color: rgba(5, 194, 134, 0.2);
-    border-top-color: #13C296
-}
-
-.danger.loader {
-    border-color: rgba(234, 97, 97, 0.2);
-    border-top-color: rgb(234, 97, 97);
-}
-
-.light.loader {
-    border-color: rgba(186, 187, 190, 0.2);
-    border-top-color: rgb(186, 187, 190);
+    border-color:  rgba(55, 88, 249, 0.2);
+    border-top-color: rgb(55, 88, 249);
 }
 
 .primary.loader::before {
-    background: rgb(219, 171, 10);
-}
-
-.success.loader::before {
-    background: #13C296
-}
-
-.danger.loader::before {
-    background: rgb(239, 68, 68);
-}
-
-.light.loader::before {
-    background: rgb(243, 244, 246);
+    background: rgb(55, 88, 249);
 }
