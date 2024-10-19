@@ -1,0 +1,30 @@
+.bar {
+    width: 7px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.1);
+    margin-right: 3px;
+    border-radius: 5px;
+}
+
+.bar.green {
+    cursor: pointer;
+    background-color: #13C296
+}
+
+.bar.green:hover {
+    opacity: 0.5;
+}
+
+.bar.red {
+    cursor: pointer;
+    background-color: rgba(239, 68, 68, 0.7);
+}
+
+.bar.red:hover {
+    opacity: 0.5;
+}
+
+.bar-container {
+    display: flex;
+    align-items: center;
+}
