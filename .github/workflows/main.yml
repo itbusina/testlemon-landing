@@ -1,0 +1,45 @@
+name: Deploy to Azure Blob Storage
+
+on:
+    push:
+        branches: [ main ]
+    workflow_dispatch:
+        
+env:
+  STORAGE_ACCOUNT_NAME: 'apibeedb'
+  CDN_PROFILE_NAME: 'apibeecdnprofile'
+  CDN_ENDPOINT: 'apibee'
+  RESOURCE_GROUP: 'apibee-rg'
+  
+jobs:
+  deploy-to-blob:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: azure/login@v1
+      with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Clean up blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+            az storage blob delete-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode key -s '$web'
+            
+    - name: Copy to blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+            az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode key -d '$web' -s './web'
+            
+    - name: Purge CDN endpoint
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+           az cdn endpoint purge --content-paths  "/*" --profile-name ${{ env.CDN_PROFILE_NAME }} --name ${{ env.CDN_ENDPOINT }} --resource-group ${{ env.RESOURCE_GROUP }}
+
+  # Azure logout
+    - name: logout
+      run: |
+            az logout
+      if: always()
