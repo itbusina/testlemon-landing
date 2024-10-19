@@ -1,9 +1,19 @@
+@media (min-width: 540px) {
+    .bar {
+        width: 25px !important;
+        height: 100px !important;
+        background-color: rgba(0, 0, 0, 0.1);
+        margin-right: 15px !important;
+        border-radius: 25px;
+    }
+}
+
 .bar {
-    width: 25px;
-    height: 100px;
+    width: 15px;
+    height: 40px;
     background-color: rgba(0, 0, 0, 0.1);
-    margin-right: 15px;
-    border-radius: 20px;
+    margin-right: 10px;
+    border-radius: 15px;
 }
 
 .bar.green {

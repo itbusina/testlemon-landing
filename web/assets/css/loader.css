@@ -7,13 +7,29 @@
     }
 }
 
+@media (min-width: 540px) {
+    .loader {
+        width: 100px !important;
+        min-width: 100px !important;
+        height: 100px !important;
+        min-width: 100px !important;
+        border-radius: 50%;
+        border-width: 15px !important;
+        border: 15px solid; /* General border for the loader */
+        border-top-color: transparent; /* The top part is transparent to create the spin illusion */
+        animation: spin 3s linear infinite;
+        position: relative;
+        cursor: pointer;
+    }
+}
+
 .loader {
-    width: 100px;
-    min-width: 100px;
-    height: 100px;
-    min-width: 100px;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    min-width: 40px;
     border-radius: 50%;
-    border: 15px solid; /* General border for the loader */
+    border: 5px solid; /* General border for the loader */
     border-top-color: transparent; /* The top part is transparent to create the spin illusion */
     animation: spin 3s linear infinite;
     position: relative;
