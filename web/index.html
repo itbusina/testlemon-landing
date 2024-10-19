@@ -1726,6 +1726,21 @@
   </a>
   <!-- ====== Back To Top End -->
 
+  <!-- ====== Cookie banner -->
+  <div id="gdpr-banner"
+    class="text-sm fixed bottom-8 left-4 z-[999] inline-flex items-center gap-[10px] rounded-lg bg-white px-[14px] py-2 shadow-2 dark:bg-dark-2 sm:left-9">
+    
+    <span class="font-medium text-dark-3 dark:text-dark-6">
+      This website uses cookies. <a href="https://docs.apibee.app/privacy-policy"
+        style="text-decoration: underline;">Learn more</a>
+    </span>
+    <span class="block h-4 w-px bg-stroke dark:bg-dark-3"></span>
+    <button class="font-medium text-primary dark:text-white" onclick="handleGDPRConsent(true)">Accept</button>
+    <span class="block h-4 w-px bg-stroke dark:bg-dark-3"></span>
+    <button class="font-medium text-dark-3 dark:text-dark-6" onclick="handleGDPRConsent(false)">Reject</button>
+  </div>
+  <!-- ====== Made With Button End -->
+
   <!-- ====== All Scripts -->
 
   <script src="assets/js/swiper-bundle.min.js"></script>
@@ -1799,6 +1814,47 @@
         },
       },
     });
+  </script>
+  <script>
+    const trackingID = 'G-XXXXXXX'; // TODO: set Google Analytics Tag here
+
+    // Check if the user has given consent
+    const consentGiven = localStorage.getItem("gdpr-consent") === "accepted";
+
+    // Check if consent is already given
+    document.addEventListener("DOMContentLoaded", function () {
+      if (!consentGiven) {
+        // Show the consent banner
+        document.getElementById("gdpr-banner").style.display = "flex";
+      }
+    });
+
+    // Function to handle consent
+    function handleGDPRConsent(consentGiven) {
+      localStorage.setItem("gdpr-consent", consentGiven ? "accepted" : "rejected");
+      document.getElementById("gdpr-banner").style.display = "none";
+    }
+
+    // Function to load Google Analytics script
+    function loadGAScript(trackingID) {
+      const gaScript = document.createElement('script');
+      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + trackingID;  // Replace with your Tracking ID
+      gaScript.async = true;
+      document.head.appendChild(gaScript);
+
+      // Initialize GA after script is loaded
+      gaScript.onload = function () {
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', trackingID);
+      };
+    }
+
+    // Only load GA if consent is given
+    if (consentGiven) {
+      loadGAScript(trackingID);
+    }
   </script>
 </body>
 
