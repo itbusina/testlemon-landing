@@ -1274,8 +1274,14 @@ export function homeTemplate() {
         <div class="w-full px-4">
           <div class="wow fadeInUp relative z-10 mx-auto max-w-[845px]" data-wow-delay=".25s">
             <div class="mt-16">
-              <img src="assets/images/hero/hero-image-white.png" alt="hero" class="mx-auto max-w-full rounded-t-xl rounded-tr-xl dark:hidden" />
-              <img src="assets/images/hero/hero-image-black.png" alt="hero" class="mx-auto max-w-full rounded-t-xl rounded-tr-xl hidden dark:block" />
+              <video width="2000" autoplay loop poster="assets/images/hero/hero-image-white.png" class="dark:hidden mx-auto max-w-full rounded-t-xl rounded-tr-xl">
+                <source src="assets/videos/hero/hero-video-white.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              <video width="2000" autoplay loop poster="assets/images/hero/hero-image-black.png" class="hidden dark:block mx-auto max-w-full rounded-t-xl rounded-tr-xl">
+                <source src="assets/videos/hero/hero-video-black.mov" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
             </div>
             <div class="absolute -left-9 bottom-0 z-[-1]">
               <svg width="134" height="106" viewBox="0 0 134 106" fill="none" xmlns="http://www.w3.org/2000/svg">
