@@ -1,6 +1,5 @@
 import { _variables } from './variables.js';
 import { _main } from './main.js';
-import { _extras } from './extras.js';
 import { _gdpr } from './gdpr.js';
 import {
     insertTemplate,
@@ -20,7 +19,7 @@ import {
 
 let _vars = _variables();
 
-insertTemplate('nav', 'beforeend', navTemplate());
+insertTemplate('nav', 'beforeend', navTemplate("text-body-color", "text-white", "bg-primary hover:bg-blue-dark"));
 insertTemplate('home', 'beforeend', homeTemplate());
 insertTemplate('features', 'beforeend', featuresTemplate());
 insertTemplate('about', 'beforeend', aboutTemplate());
@@ -35,4 +34,3 @@ insertTemplate('gdpr', 'beforeend', cookieConsentTemplate(_vars.privacyUrl));
 
 _gdpr(_vars.GATrackingID);
 _main();
-_extras();
