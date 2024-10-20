@@ -1,5 +1,6 @@
 import { _variables } from './variables.js';
 import { _main } from './main.js';
+import { _extras } from './extras.js';
 import { _gdpr } from './gdpr.js';
 import {
     insertTemplate,
@@ -34,3 +35,4 @@ insertTemplate('gdpr', 'beforeend', cookieConsentTemplate(_vars.privacyUrl));
 
 _gdpr(_vars.GATrackingID);
 _main();
+_extras();
