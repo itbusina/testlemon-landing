@@ -1128,7 +1128,7 @@ export function featuresTemplate () {
               </svg>
             </div>
             <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">
-              Web Monitoring
+              Website Monitoring
             </h4>
             <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
               Stay alert to website issues with dependable monitoring that notifies you of downtime, SSL certificate
