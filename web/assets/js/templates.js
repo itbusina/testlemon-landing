@@ -32,7 +32,7 @@ export function footerTemplate() {
   return `
     <div class="container">
       <div class="-mx-4 flex flex-wrap">
-        <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-3/12">
+        <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-4/12">
           <div class="mb-10 w-full">
             <a href="javascript:void(0)" class="mb-6 inline-block max-w-[160px]">
               <img style="height: 50px;" src="assets/images/logo/logo-white.svg" alt="logo" class="max-w-full" />
@@ -72,7 +72,7 @@ export function footerTemplate() {
             </div>
           </div>
         </div>
-        <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-3/12">
+        <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
           <div class="mb-10 w-full">
             <h4 class="mb-9 text-lg font-semibold text-white">Features</h4>
             <ul>
@@ -144,7 +144,7 @@ export function footerTemplate() {
             </ul>
           </div>
         </div>
-        <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-3/12">
+        <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
           <div class="mb-10 w-full">
             <h4 class="mb-9 text-lg font-semibold text-white">Company</h4>
             <ul>
@@ -181,7 +181,7 @@ export function footerTemplate() {
             </ul>
           </div>
         </div>
-        <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-3/12">
+        <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
           <div class="mb-10 w-full">
             <h4 class="mb-9 text-lg font-semibold text-white">
               Resources
@@ -220,6 +220,50 @@ export function footerTemplate() {
               <li>
                 <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   Help center
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+          <div class="mb-10 w-full">
+            <h4 class="mb-9 text-lg font-semibold text-white">
+              For everyone
+            </h4>
+            <ul>
+              <li>
+                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  Business owners
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  Product managers
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  Marketers
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  DevOps
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  Testers
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  Developers
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  Support
                 </a>
               </li>
             </ul>
