@@ -1238,13 +1238,13 @@ export function homeTemplate() {
             </p>
             <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
               <li>
-                <a href="https://links.tailgrids.com/play-download"
+                <a href="http://www.apibee.app/"
                   class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
                   Start monitoring for FREE
                 </a>
               </li>
               <li>
-                <a href="https://github.com/tailgrids/play-tailwind" target="_blank"
+                <a href="https://github.com/itbusina/apibee-docs/tree/main/src/examples" target="_blank"
                   class="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark">
                   <svg class="fill-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -1646,11 +1646,10 @@ export function navTemplate(menuItemCssClass, themeSwitcherCssClass, textDarkCss
               </span>
             </label>
             <div class="hidden sm:flex">
-              <a href="signin.html" class="loginBtn px-[22px] py-2 text-base font-medium hover:opacity-70 ${textDarkCssClass}">
+              <a href="https://apibee.app/" class="loginBtn px-[22px] py-2 text-base font-medium hover:opacity-70 ${textDarkCssClass}">
                 Sign In
               </a>
-              <a href="signup.html"
-                class="signUpBtn rounded-md px-6 py-2 text-base font-medium text-white duration-300 ease-in-out ${focusButtonColor}">
+              <a href="https://apibee.app/account/login" class="signUpBtn rounded-md px-6 py-2 text-base font-medium text-white duration-300 ease-in-out ${focusButtonColor}">
                 Sign Up
               </a>
             </div>
