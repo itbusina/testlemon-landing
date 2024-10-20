@@ -1,4 +1,4 @@
-(function () {
+export function _main() {
   "use strict";
 
   // ======= Sticky
@@ -13,7 +13,7 @@
       ud_header.classList.remove("sticky");
     }
 
-    if(logo.length) {
+    if (logo.length) {
       // === logo change
       if (ud_header.classList.contains("sticky")) {
         document.querySelector(".header-logo").src =
@@ -25,12 +25,12 @@
     }
 
     if (document.documentElement.classList.contains("dark")) {
-      if(logo.length) {
+      if (logo.length) {
         // === logo change
         if (ud_header.classList.contains("sticky")) {
           document.querySelector(".header-logo").src =
             "assets/images/logo/logo-white.svg"
-        } 
+        }
       }
     }
 
@@ -118,7 +118,7 @@
     scrollTo(document.documentElement);
   };
 
-    /* ========  themeSwitcher start ========= */
+  /* ========  themeSwitcher start ========= */
 
   // themeSwitcher
   const themeSwitcher = document.getElementById('themeSwitcher');
@@ -155,4 +155,4 @@
   // invoke theme check on initial load
   themeCheck();
   /* ========  themeSwitcher End ========= */
-})();
+};

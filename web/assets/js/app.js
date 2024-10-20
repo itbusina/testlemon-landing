@@ -1,10 +1,15 @@
 import { _variables } from './variables.js';
-import { cookieConsentTemplate, scrollTopTemplate } from './templates.js';
+import { _main } from './main.js';
+import { cookieConsentTemplate, scrollTopTemplate, footerTemplate } from './templates.js';
 
 let _vars = _variables();
 
 let gdpr = document.getElementById('gdpr');
-let scrollToTop = document.getElementById('scrollToTop');
+let scroll = document.getElementById('scroll');
+let footer = document.getElementById('footer');
 
-scrollToTop.insertAdjacentHTML('beforeend', scrollTopTemplate());
+footer.insertAdjacentHTML('beforeend', footerTemplate());
+scroll.insertAdjacentHTML('beforeend', scrollTopTemplate());
 gdpr.insertAdjacentHTML('beforeend', cookieConsentTemplate(_vars.privacyUrl));
+
+_main();
