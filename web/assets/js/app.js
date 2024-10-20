@@ -10,7 +10,8 @@ import {
     faqTemplate,
     pricingTemplate,
     ctaTemplate,
-    aboutTemplate
+    aboutTemplate,
+    featuresTemplate
 } from './templates.js';
 
 let _vars = _variables();
@@ -24,8 +25,10 @@ let faq = document.getElementById('faq');
 let pricing = document.getElementById('pricing');
 let cta = document.getElementById('cta');
 let about = document.getElementById('about');
+let features = document.getElementById('features');
 
 
+features.insertAdjacentHTML('beforeend', featuresTemplate());
 about.insertAdjacentHTML('beforeend', aboutTemplate());
 cta.insertAdjacentHTML('beforeend', ctaTemplate());
 pricing.insertAdjacentHTML('beforeend', pricingTemplate());
