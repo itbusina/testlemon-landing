@@ -20,8 +20,8 @@ import {
 
 let _vars = _variables();
 
-insertTemplate('nav', 'beforeend', navTemplate("text-body-color", "text-white", "bg-primary hover:bg-blue-dark"));
-insertTemplate('banner', 'beforeend', bannerTemplate());
+insertTemplate('nav', 'beforeend', navTemplate("text-body-color", "text-white", "dark:hidden", "hidden dark:block", "bg-primary hover:bg-blue-dark"));
+insertTemplate('banner', 'beforeend', bannerTemplate("Page not found.", "something went wrong."));
 insertTemplate('features', 'beforeend', featuresTemplate());
 insertTemplate('about', 'beforeend', aboutTemplate());
 insertTemplate('cta', 'beforeend', ctaTemplate());
