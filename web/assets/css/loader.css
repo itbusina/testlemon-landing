@@ -10,10 +10,10 @@
 @media (min-width: 960px) {
     .loader {
         display: block !important;
-        width: 400px !important;
-        min-width: 400px !important;
-        height: 400px !important;
-        min-width: 400px !important;
+        width: 300px !important;
+        min-width: 300px !important;
+        height: 300px !important;
+        min-width: 300px !important;
         border-radius: 50%;
         border-width: 50px !important;
         border: 15px solid; /* General border for the loader */
