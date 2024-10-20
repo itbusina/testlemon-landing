@@ -1321,11 +1321,13 @@ export function homeTemplate() {
               <video width="2000" autoplay loop poster="assets/images/hero/hero-image-white.png" class="dark:hidden mx-auto max-w-full rounded-t-xl rounded-tr-xl">
                 <source src="assets/videos/hero/hero-video-white-crop.mp4" type="video/mp4">
                 <source src="assets/videos/hero/hero-video-white-crop.webm" type="video/webm">
+                <source src="assets/videos/hero/hero-video-white-crop-hevc.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               <video width="2000" autoplay loop poster="assets/images/hero/hero-image-black.png" class="hidden dark:block mx-auto max-w-full rounded-t-xl rounded-tr-xl">
                 <source src="assets/videos/hero/hero-video-black-crop.mp4" type="video/mp4">
                 <source src="assets/videos/hero/hero-video-black-crop.webm" type="video/webm">
+                <source src="assets/videos/hero/hero-video-black-crop-hevc.mp4" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
             </div>
