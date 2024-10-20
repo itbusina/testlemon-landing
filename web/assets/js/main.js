@@ -155,4 +155,4 @@ export function _main() {
   // invoke theme check on initial load
   themeCheck();
   /* ========  themeSwitcher End ========= */
-};
+}
