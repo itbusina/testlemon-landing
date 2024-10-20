@@ -1238,7 +1238,7 @@ export function homeTemplate() {
             </p>
             <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
               <li>
-                <a href="http://www.apibee.app/"
+                <a href="https://apibee.app/"
                   class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
                   Start monitoring for FREE
                 </a>
@@ -1552,6 +1552,14 @@ export function navTemplate(menuItemCssClass, themeSwitcherCssClass, textDarkCss
                     <a href="contact.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       AI-augmented testing
+                    </a>
+                    <a href="contact.html"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Domain testing
+                    </a>
+                    <a href="contact.html"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      DMARK testing
                     </a>
                     <a href="blog-details.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
