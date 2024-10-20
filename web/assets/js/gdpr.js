@@ -11,7 +11,7 @@ export function _gdpr(trackingID) {
     });
 
     // Function to handle consent
-    function handleGDPRConsent(consentGiven) {
+    window.handleGDPRConsent = function (consentGiven) {
         localStorage.setItem("gdpr-consent", consentGiven ? "accepted" : "rejected");
         document.getElementById("gdpr-banner").style.display = "none";
     }
