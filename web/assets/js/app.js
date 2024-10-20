@@ -1,7 +1,7 @@
 import { _variables } from './variables.js';
 import { _main } from './main.js';
 import { _gdpr } from './gdpr.js';
-import { cookieConsentTemplate, scrollTopTemplate, footerTemplate, contactTemplate, blogTemplate, faqTemplate } from './templates.js';
+import { cookieConsentTemplate, scrollTopTemplate, footerTemplate, contactTemplate, blogTemplate, faqTemplate, pricingTemplate } from './templates.js';
 
 let _vars = _variables();
 
@@ -11,7 +11,11 @@ let footer = document.getElementById('footer');
 let contact = document.getElementById('contact');
 let blog = document.getElementById('blog');
 let faq = document.getElementById('faq');
+let pricing = document.getElementById('pricing');
 
+
+
+pricing.insertAdjacentHTML('beforeend', pricingTemplate());
 faq.insertAdjacentHTML('beforeend', faqTemplate());
 blog.insertAdjacentHTML('beforeend', blogTemplate());
 contact.insertAdjacentHTML('beforeend', contactTemplate(_vars.companyAddress, _vars.companyEmail));
