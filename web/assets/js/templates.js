@@ -1318,12 +1318,12 @@ export function homeTemplate() {
         <div class="w-full px-4">
           <div class="wow fadeInUp relative z-10 mx-auto max-w-[845px]" data-wow-delay=".25s">
             <div class="mt-16">
-              <video width="2000" autoplay muted loop poster="assets/images/hero/hero-image-white.png" class="dark:hidden mx-auto max-w-full rounded-t-xl rounded-tr-xl">
+              <video width="2000" autoplay playsinline muted loop poster="assets/images/hero/hero-image-white.png" class="dark:hidden mx-auto max-w-full rounded-t-xl rounded-tr-xl">
                 <source src="assets/videos/hero/hero-video-white-crop.mp4" type="video/mp4">  
                 <source src="assets/videos/hero/hero-video-white-crop.webm" type="video/webm">  
                 Your browser does not support the video tag.
               </video>
-              <video width="2000" autoplay muted loop poster="assets/images/hero/hero-image-black.png" class="hidden dark:block mx-auto max-w-full rounded-t-xl rounded-tr-xl">
+              <video width="2000" autoplay playsinline muted loop poster="assets/images/hero/hero-image-black.png" class="hidden dark:block mx-auto max-w-full rounded-t-xl rounded-tr-xl">
                 <source src="assets/videos/hero/hero-video-black-crop.mp4" type="video/mp4">  
                 <source src="assets/videos/hero/hero-video-black-crop.webm" type="video/webm">  
                 Your browser does not support the video tag.
