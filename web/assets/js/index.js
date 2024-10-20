@@ -20,7 +20,7 @@ import {
 
 let _vars = _variables();
 
-insertTemplate('nav', 'beforeend', navTemplate("text-white", "text-white", "hidden", "header-logo", "bg-white bg-opacity-20 hover:bg-opacity-100 hover:text-dark"));
+insertTemplate('nav', 'beforeend', navTemplate("lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70", "text-white dark:hidden", "text-white", "hidden", "header-logo", "bg-white bg-opacity-20 hover:bg-opacity-100 hover:text-dark"));
 insertTemplate('home', 'beforeend', homeTemplate());
 insertTemplate('features', 'beforeend', featuresTemplate());
 insertTemplate('about', 'beforeend', aboutTemplate());
