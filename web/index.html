@@ -454,7 +454,7 @@
   <!-- ====== Hero Section End -->
 
   <!-- ====== Features Section Start -->
-  <section class="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
+  <section id="features" class="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]">
     <div class="container">
       <div class="-mx-4 flex flex-wrap">
         <div class="w-full px-4">
@@ -618,7 +618,7 @@
   <!-- ====== About Section End -->
 
   <!-- ====== CTA Section Start -->
-  <section class="relative z-10 overflow-hidden bg-primary py-20 lg:py-[115px]">
+  <section id="cta" class="relative z-10 overflow-hidden bg-primary py-20 lg:py-[115px]">
     <div class="container mx-auto">
       <div class="relative overflow-hidden">
         <div class="-mx-4 flex flex-wrap items-stretch">
@@ -845,7 +845,7 @@
   <!-- ====== Pricing Section End -->
 
   <!-- ====== FAQ Section Start -->
-  <section class="relative z-20 overflow-hidden bg-gray-1 pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
+  <section id="faq" class="relative z-20 overflow-hidden bg-gray-1 pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
     <div class="container mx-auto">
       <div class="-mx-4 flex flex-wrap">
         <div class="w-full px-4">
@@ -1052,7 +1052,7 @@
   <!-- ====== FAQ Section End -->
 
   <!-- ====== Blog Section Start -->
-  <section class="bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
+  <section id="blog" class="bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]">
     <div class="container mx-auto">
       <div class="-mx-4 flex flex-wrap justify-center">
         <div class="w-full px-4">
@@ -1252,7 +1252,7 @@
   <!-- ====== Contact End ====== -->
 
   <!-- ====== Footer Section Start -->
-  <footer class="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]" data-wow-delay=".15s">
+  <footer id="footer" class="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]" data-wow-delay=".15s">
     <div class="container">
       <div class="-mx-4 flex flex-wrap">
         <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-3/12">
@@ -1660,8 +1660,8 @@
   <!-- ====== Cookie Banner End -->
 
   <!-- ====== All Scripts -->
-  <script type="module" src="assets/js/variables.js"></script>
   <script type="module" src="assets/js/app.js"></script>
+  <script src="assets/js/gdpr.js"></script>
   <script src="assets/js/swiper-bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
@@ -1733,47 +1733,6 @@
         },
       },
     });
-  </script>
-  <script>
-    const trackingID = 'G-XXXXXXX'; // TODO: set Google Analytics Tag here
-
-    // Check if the user has given consent
-    const consentGiven = localStorage.getItem("gdpr-consent") === "accepted";
-
-    // Check if consent is already given
-    document.addEventListener("DOMContentLoaded", function () {
-      if (!consentGiven) {
-        // Show the consent banner
-        document.getElementById("gdpr-banner").style.display = "flex";
-      }
-    });
-
-    // Function to handle consent
-    function handleGDPRConsent(consentGiven) {
-      localStorage.setItem("gdpr-consent", consentGiven ? "accepted" : "rejected");
-      document.getElementById("gdpr-banner").style.display = "none";
-    }
-
-    // Function to load Google Analytics script
-    function loadGAScript(trackingID) {
-      const gaScript = document.createElement('script');
-      gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + trackingID;  // Replace with your Tracking ID
-      gaScript.async = true;
-      document.head.appendChild(gaScript);
-
-      // Initialize GA after script is loaded
-      gaScript.onload = function () {
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', trackingID);
-      };
-    }
-
-    // Only load GA if consent is given
-    if (consentGiven) {
-      loadGAScript(trackingID);
-    }
   </script>
 </body>
 
