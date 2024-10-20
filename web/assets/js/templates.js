@@ -1230,7 +1230,7 @@ export function homeTemplate() {
           <div class="hero-content wow fadeInUp mx-auto max-w-[780px] text-center" data-wow-delay=".2s">
             <h1
               class="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
-              Monitor websites, debug APIs, run tests automation locally, in CI/CD, or cloud
+              Monitor Websites, Debug APIs, Run Tests Automation
             </h1>
             <p class="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
               Empowering teams to test and monitor web applications easily, reliably, and cost-effectively, ensuring
@@ -1274,8 +1274,8 @@ export function homeTemplate() {
         <div class="w-full px-4">
           <div class="wow fadeInUp relative z-10 mx-auto max-w-[845px]" data-wow-delay=".25s">
             <div class="mt-16">
-              <img src="assets/images/hero/hero-image.png" alt="hero"
-                class="mx-auto max-w-full rounded-t-xl rounded-tr-xl" />
+              <img src="assets/images/hero/hero-image-white.png" alt="hero" class="mx-auto max-w-full rounded-t-xl rounded-tr-xl dark:hidden" />
+              <img src="assets/images/hero/hero-image-black.png" alt="hero" class="mx-auto max-w-full rounded-t-xl rounded-tr-xl hidden dark:block" />
             </div>
             <div class="absolute -left-9 bottom-0 z-[-1]">
               <svg width="134" height="106" viewBox="0 0 134 106" fill="none" xmlns="http://www.w3.org/2000/svg">
