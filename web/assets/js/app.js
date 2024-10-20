@@ -1,7 +1,17 @@
 import { _variables } from './variables.js';
 import { _main } from './main.js';
 import { _gdpr } from './gdpr.js';
-import { cookieConsentTemplate, scrollTopTemplate, footerTemplate, contactTemplate, blogTemplate, faqTemplate, pricingTemplate, ctaTemplate } from './templates.js';
+import {
+    cookieConsentTemplate,
+    scrollTopTemplate,
+    footerTemplate,
+    contactTemplate,
+    blogTemplate,
+    faqTemplate,
+    pricingTemplate,
+    ctaTemplate,
+    aboutTemplate
+} from './templates.js';
 
 let _vars = _variables();
 
@@ -13,9 +23,10 @@ let blog = document.getElementById('blog');
 let faq = document.getElementById('faq');
 let pricing = document.getElementById('pricing');
 let cta = document.getElementById('cta');
+let about = document.getElementById('about');
 
 
-
+about.insertAdjacentHTML('beforeend', aboutTemplate());
 cta.insertAdjacentHTML('beforeend', ctaTemplate());
 pricing.insertAdjacentHTML('beforeend', pricingTemplate());
 faq.insertAdjacentHTML('beforeend', faqTemplate());
