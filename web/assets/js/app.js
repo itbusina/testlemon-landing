@@ -2,6 +2,7 @@ import { _variables } from './variables.js';
 import { _main } from './main.js';
 import { _gdpr } from './gdpr.js';
 import {
+    insertTemplate,
     cookieConsentTemplate,
     scrollTopTemplate,
     footerTemplate,
@@ -18,31 +19,18 @@ import {
 
 let _vars = _variables();
 
-let gdpr = document.getElementById('gdpr');
-let scroll = document.getElementById('scroll');
-let footer = document.getElementById('footer');
-let contact = document.getElementById('contact');
-let blog = document.getElementById('blog');
-let faq = document.getElementById('faq');
-let pricing = document.getElementById('pricing');
-let cta = document.getElementById('cta');
-let about = document.getElementById('about');
-let features = document.getElementById('features');
-let home = document.getElementById('home');
-let nav = document.getElementById('nav');
-
-nav.insertAdjacentHTML('beforeend', navTemplate());
-home.insertAdjacentHTML('beforeend', homeTemplate());
-features.insertAdjacentHTML('beforeend', featuresTemplate());
-about.insertAdjacentHTML('beforeend', aboutTemplate());
-cta.insertAdjacentHTML('beforeend', ctaTemplate());
-pricing.insertAdjacentHTML('beforeend', pricingTemplate());
-faq.insertAdjacentHTML('beforeend', faqTemplate());
-blog.insertAdjacentHTML('beforeend', blogTemplate());
-contact.insertAdjacentHTML('beforeend', contactTemplate(_vars.companyAddress, _vars.companyEmail));
-footer.insertAdjacentHTML('beforeend', footerTemplate());
-scroll.insertAdjacentHTML('beforeend', scrollTopTemplate());
-gdpr.insertAdjacentHTML('beforeend', cookieConsentTemplate(_vars.privacyUrl));
+insertTemplate('nav', 'beforeend', navTemplate());
+insertTemplate('home', 'beforeend', homeTemplate());
+insertTemplate('features', 'beforeend', featuresTemplate());
+insertTemplate('about', 'beforeend', aboutTemplate());
+insertTemplate('cta', 'beforeend', ctaTemplate());
+insertTemplate('pricing', 'beforeend', pricingTemplate());
+insertTemplate('faq', 'beforeend', faqTemplate());
+insertTemplate('blog', 'beforeend', blogTemplate());
+insertTemplate('contact', 'beforeend', contactTemplate(_vars.companyAddress, _vars.companyEmail));
+insertTemplate('footer', 'beforeend', footerTemplate());
+insertTemplate('scroll', 'beforeend', scrollTopTemplate());
+insertTemplate('gdpr', 'beforeend', cookieConsentTemplate(_vars.privacyUrl));
 
 _gdpr(_vars.GATrackingID);
 _main();

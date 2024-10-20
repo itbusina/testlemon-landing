@@ -1,3 +1,8 @@
+export function insertTemplate (selector, position, html) {
+  let element = document.getElementById(selector);
+  element.insertAdjacentHTML(position, html);
+}
+
 export function cookieConsentTemplate(privacyUrl) {
   return `
     <div id="gdpr-banner" class="text-xs fixed bottom-8 left-4 z-[999] inline-flex items-center gap-[10px] rounded-lg bg-white px-[14px] py-2 shadow-2 dark:bg-dark-2 sm:left-9">
