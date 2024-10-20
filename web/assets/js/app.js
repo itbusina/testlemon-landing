@@ -11,7 +11,8 @@ import {
     pricingTemplate,
     ctaTemplate,
     aboutTemplate,
-    featuresTemplate
+    featuresTemplate,
+    homeTemplate
 } from './templates.js';
 
 let _vars = _variables();
@@ -26,8 +27,10 @@ let pricing = document.getElementById('pricing');
 let cta = document.getElementById('cta');
 let about = document.getElementById('about');
 let features = document.getElementById('features');
+let home = document.getElementById('home');
 
 
+home.insertAdjacentHTML('beforeend', homeTemplate());
 features.insertAdjacentHTML('beforeend', featuresTemplate());
 about.insertAdjacentHTML('beforeend', aboutTemplate());
 cta.insertAdjacentHTML('beforeend', ctaTemplate());
