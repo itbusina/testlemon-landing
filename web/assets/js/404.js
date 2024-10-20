@@ -3,6 +3,8 @@ import { _main } from './main.js';
 import { _gdpr } from './gdpr.js';
 import {
     insertTemplate,
+    navTemplate,
+    bannerTemplate,
     cookieConsentTemplate,
     scrollTopTemplate,
     footerTemplate,
@@ -13,14 +15,13 @@ import {
     ctaTemplate,
     aboutTemplate,
     featuresTemplate,
-    homeTemplate,
-    navTemplate
+    homeTemplate
 } from './templates.js';
 
 let _vars = _variables();
 
 insertTemplate('nav', 'beforeend', navTemplate("text-body-color", "text-white", "bg-primary hover:bg-blue-dark"));
-insertTemplate('home', 'beforeend', homeTemplate());
+insertTemplate('banner', 'beforeend', bannerTemplate());
 insertTemplate('features', 'beforeend', featuresTemplate());
 insertTemplate('about', 'beforeend', aboutTemplate());
 insertTemplate('cta', 'beforeend', ctaTemplate());

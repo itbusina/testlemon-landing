@@ -1651,3 +1651,45 @@ export function navTemplate(textColor, textDarkColor, focusButtonColor) {
     </div>
   `;
 }
+
+export function bannerTemplate () {
+  return `
+  <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3"></div>
+      <div class="container">
+        <div class="flex flex-wrap items-center -mx-4">
+          <div class="w-full px-4">
+            <div class="text-center">
+              <h1
+                class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]"
+              >
+                404 Page
+              </h1>
+              <p class="mb-5 text-base text-body-color dark:text-dark-6">
+                There are many variations of passages of Lorem Ipsum available.
+              </p>
+
+              <ul class="flex items-center justify-center gap-[10px]">
+                <li>
+                  <a
+                    href="index.html"
+                    class="flex items-center gap-[10px] text-base font-medium text-dark dark:text-white"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="javascript:void(0)"
+                    class="flex items-center gap-[10px] text-base font-medium text-body-color"
+                  >
+                    <span class="text-body-color dark:text-dark-6"> / </span>
+                    404
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  `;
+}
