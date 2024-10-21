@@ -18,7 +18,7 @@
         border-width: 50px !important;
         border: 15px solid; /* General border for the loader */
         border-top-color: transparent; /* The top part is transparent to create the spin illusion */
-        animation: spin 10s linear infinite;
+        animation: spin 10s ease-in-out infinite;
         position: relative;
         cursor: pointer;
     }
