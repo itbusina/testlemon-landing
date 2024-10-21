@@ -1178,8 +1178,7 @@ export function featuresTemplate() {
               Website Monitoring
             </h4>
             <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
-              Stay alert to website issues with dependable monitoring that notifies you of downtime, SSL certificate
-              expirations, and domain expirations before they escalate into major problems.
+              Stay ahead of website issues with real-time monitoring – get notified instantly about downtime, SSL expirations, and more before they impact your business!
             </p>
             <a href="javascript:void(0)"
               class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary">
@@ -1228,8 +1227,7 @@ export function featuresTemplate() {
               AI-augmented Validation
             </h4>
             <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
-              Elevate software testing by harnessing artificial intelligence to foresee defects and boost efficiency,
-              utilizing advanced data analytics for enhanced insights into testing processes and results.
+              Uncover hidden issues through deeper content analysis that regular testing approach might miss.
             </p>
             <a href="javascript:void(0)"
               class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary">
