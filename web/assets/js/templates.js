@@ -1143,131 +1143,12 @@ export function aboutTemplate() {
   `;
 }
 
-export function featuresTemplate() {
-  return `
-  <div class="container">
-      <div class="-mx-4 flex flex-wrap">
-        <div class="w-full px-4">
-          <div class="mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]">
-            <span class="mb-2 block text-lg font-semibold text-primary">
-              Features
-            </span>
-            <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-              Main Features Of ApiBee
-            </h2>
-            <p class="text-base text-body-color dark:text-dark-6">
-              All-in-One solution for effortless website testing and monitoring.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="-mx-4 flex flex-wrap">
-        <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-          <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
-            <div
-              class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
-              <span
-                class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"></span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#ffffff" viewBox="0 0 256 256">
-                <path
-                  d="M240,128a8,8,0,0,1-8,8H204.94l-37.78,75.58A8,8,0,0,1,160,216h-.4a8,8,0,0,1-7.08-5.14L95.35,60.76,63.28,131.31A8,8,0,0,1,56,136H24a8,8,0,0,1,0-16H50.85L88.72,36.69a8,8,0,0,1,14.76.46l57.51,151,31.85-63.71A8,8,0,0,1,200,120h32A8,8,0,0,1,240,128Z">
-                </path>
-              </svg>
-            </div>
-            <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">
-              Website Monitoring
-            </h4>
-            <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
-              Stay ahead of website issues with real-time monitoring – get notified instantly about downtime, SSL expirations, and more before they impact your business!
-            </p>
-            <a href="javascript:void(0)"
-              class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary">
-              Learn More
-            </a>
-          </div>
-        </div>
-        <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-          <div class="wow fadeInUp group mb-12" data-wow-delay=".15s">
-            <div
-              class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
-              <span
-                class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"></span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#ffffff" viewBox="0 0 256 256">
-                <path
-                  d="M200,152a31.84,31.84,0,0,0-19.53,6.68l-23.11-18A31.65,31.65,0,0,0,160,128c0-.74,0-1.48-.08-2.21l13.23-4.41A32,32,0,1,0,168,104c0,.74,0,1.48.08,2.21l-13.23,4.41A32,32,0,0,0,128,96a32.59,32.59,0,0,0-5.27.44L115.89,81A32,32,0,1,0,96,88a32.59,32.59,0,0,0,5.27-.44l6.84,15.4a31.92,31.92,0,0,0-8.57,39.64L73.83,165.44a32.06,32.06,0,1,0,10.63,12l25.71-22.84a31.91,31.91,0,0,0,37.36-1.24l23.11,18A31.65,31.65,0,0,0,168,184a32,32,0,1,0,32-32Zm0-64a16,16,0,1,1-16,16A16,16,0,0,1,200,88ZM80,56A16,16,0,1,1,96,72,16,16,0,0,1,80,56ZM56,208a16,16,0,1,1,16-16A16,16,0,0,1,56,208Zm56-80a16,16,0,1,1,16,16A16,16,0,0,1,112,128Zm88,72a16,16,0,1,1,16-16A16,16,0,0,1,200,200Z">
-                </path>
-              </svg>
-            </div>
-            <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">
-              Tests Automation
-            </h4>
-            <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
-              Keep your APIs functioning optimally with automated testing that identifies issues proactively, preventing
-              negative impacts on user experience.
-            </p>
-            <a href="javascript:void(0)"
-              class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary">
-              Learn More
-            </a>
-          </div>
-        </div>
-        <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-          <div class="wow fadeInUp group mb-12" data-wow-delay=".2s">
-            <div
-              class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
-              <span
-                class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"></span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#ffffff" viewBox="0 0 256 256">
-                <path
-                  d="M192.5,171.47A88.34,88.34,0,0,0,224,101.93c-1-45.71-37.61-83.4-83.24-85.8A88,88,0,0,0,48,102L25.55,145.18c-.09.18-.18.36-.26.54a16,16,0,0,0,7.55,20.62l.25.11L56,176.94V208a16,16,0,0,0,16,16h48a8,8,0,0,0,0-16H72V171.81a8,8,0,0,0-4.67-7.28L40,152l23.07-44.34A7.9,7.9,0,0,0,64,104a72,72,0,0,1,56-70.21V49.38a24,24,0,1,0,16,0V32c1.3,0,2.6,0,3.9.1A72.26,72.26,0,0,1,203.84,80H184a8,8,0,0,0-6.15,2.88L152.34,113.5a24.06,24.06,0,1,0,12.28,10.25L187.75,96h19.79q.36,3.12.44,6.3a72.26,72.26,0,0,1-28.78,59.3,8,8,0,0,0-3.14,7.39l8,64a8,8,0,0,0,7.93,7,8.39,8.39,0,0,0,1-.06,8,8,0,0,0,6.95-8.93ZM128,80a8,8,0,1,1,8-8A8,8,0,0,1,128,80Zm16,64a8,8,0,1,1,8-8A8,8,0,0,1,144,144Z">
-                </path>
-              </svg>
-            </div>
-            <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">
-              AI-augmented Validation
-            </h4>
-            <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
-              Uncover hidden issues through deeper content analysis that regular testing approach might miss.
-            </p>
-            <a href="javascript:void(0)"
-              class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary">
-              Learn More
-            </a>
-          </div>
-        </div>
-        <div class="w-full px-4 md:w-1/2 lg:w-1/4">
-          <div class="wow fadeInUp group mb-12" data-wow-delay=".25s">
-            <div
-              class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
-              <span
-                class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"></span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#ffffff" viewBox="0 0 256 256">
-                <path
-                  d="M117.31,134l-72,64a8,8,0,1,1-10.63-12L100,128,34.69,70A8,8,0,1,1,45.32,58l72,64a8,8,0,0,1,0,12ZM216,184H120a8,8,0,0,0,0,16h96a8,8,0,0,0,0-16Z">
-                </path>
-              </svg>
-            </div>
-            <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">
-              Seamless Integration
-            </h4>
-            <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
-              Enable seamless integration with CI/CD pipelines through docker cli tool and GitHub action.
-            </p>
-            <a href="javascript:void(0)"
-              class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary">
-              Learn More
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  `;
-}
-
-export function features3Template(headline = "Headline", message = "Message", features = []) {
+export function featuresTemplate(headline = "Headline", message = "Message", features = []) {
+  let columnsCount = Math.min(4, features.length);
+  
   var featuresHtml = features.map(feature => {
     return `
-    <div class="w-full px-4 md:w-1 lg:w-1/3">
+    <div class="w-full px-4 md:w-1 lg:w-1/${columnsCount}">
           <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
             <div
               class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
@@ -1295,7 +1176,10 @@ export function features3Template(headline = "Headline", message = "Message", fe
       <div class="-mx-4 flex flex-wrap">
         <div class="w-full px-4">
           <div class="mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]">
-            <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+          <span class="mb-2 block text-lg font-semibold text-primary">
+              Features
+            </span>  
+          <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
               ${headline}
             </h2>
             <p class="text-base text-body-color dark:text-dark-6">
