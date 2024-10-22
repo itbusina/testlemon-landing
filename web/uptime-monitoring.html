@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Uptime Monitoring | ApiBee</title>
   <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/tailwind.css" />
   <link rel="stylesheet" href="assets/css/page.css" />
-  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
 
   <!-- ==== WOW JS ==== -->
   <script src="assets/js/wow.min.js"></script>
@@ -63,25 +63,38 @@
   <!-- ====== All Scripts -->
   <script type="module" src="assets/js/features-page.js"></script>
   <script>
-    window._bannerHealine = "Track web availability with <strong>uptime monitoring</strong>";
-    window._bannerMessage = "Our Uptime Monitoring tool continuously checks your website’s availability, ensuring that your website is live and accessible to users 24/7.";
-    window._featuresHeanline = "Prevents costly outages and downtime";
-    window._featuresMessage = "By automatically detecting downtimes and sending immediate alerts, we help you avoid costly outages and minimize disruptions.";
-    window._features = [{
-      icon: "ph-airplay",
-      title: "Real-time alerts",
-      text: "Receive real-time alerts via email, or Slack whenever your website goes down."
-    },
-    {
-      icon: "ph-airplay",
-      title: "Historical uptime reports",
-      text: "Track your website’s uptime history with detailed monthly reports up to 365 days."
-    },
-    {
-      icon: "ph-airplay",
-      title: "Customizable monitoring intervals",
-      text: "Do real-time monitoring with up to 30 seconds intevals."
-    }];
+    window.config = {
+      bannerHealine: "Track web availability with <strong>uptime monitoring</strong>",
+      bannerMessage: "Our Uptime Monitoring tool continuously checks your website’s availability, ensuring that your website is live and accessible to users 24/7.",
+      featuresHeanline: "Prevents outages and downtime.",
+      featuresMessage: "By automatically detecting downtimes and sending immediate alerts, we help you avoid costly outages and minimize disruptions.",
+      features: [{
+        icon: "ph-bell-ringing",
+        title: "Real-time alerts",
+        text: "Receive alerts via email, or Slack whenever your website goes down."
+      },
+      {
+        icon: "ph-article",
+        title: "Historical uptime reports",
+        text: "Track your website’s uptime history with detailed monthly reports up to 365 days."
+      },
+      {
+        icon: "ph-sliders-horizontal",
+        title: "Customizable monitoring intervals",
+        text: "Do real-time monitoring with up to 30 seconds intevals."
+      }],
+      aboutTitle: "We Handle Uptime, You Handle Success",
+      aboutText: "Every single minute of downtime can have serious consequences for any digital business, leading to lost sales, reduced customer trust, and a damaged brand reputation.<br/><br/>Our uptime monitoring service actively tracks your website’s availability around the clock, ensuring that any downtime is detected instantly. You’ll receive real-time alerts, so you can take immediate action to resolve issues before they escalate, minimizing disruptions and protecting your bottom line. By reducing downtime, you maintain a seamless user experience, keeping your customers satisfied and ensuring your online store remains open for business at all times.",
+      ctaHeadline: "Want to Secure Your Uptime?",
+      ctaMessage: "Monitor Now!",
+      ctaButtonText: "Start monitoring for FREE",
+      faqs: [
+        { q: "How often does your service check my site?", a: "The monitoring interval can be configured from 30 seconds to 24 hours." },
+        { q: "How quickly will I receive alerts?", a: "The time it takes to receive the message depends on various factors, but it usually takes a few seconds." },
+        { q: "What happens if my website is down for a long period?", a: "You will continue receiving alerts until the issue is fixed." },
+        { q: "Can I configure multiple alerts recipients?", a: "Yes, you can configure the project to send emails to multiple recipients. In Slack, everyone in the channel will receive the notification." },
+      ]
+    };
   </script>
 </body>
 
