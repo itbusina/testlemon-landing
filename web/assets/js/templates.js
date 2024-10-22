@@ -669,7 +669,27 @@ export function blogTemplate() {
   `;
 }
 
-export function faqTemplate() {
+export function faqTemplate(questions = []) {
+  let faqHtml = questions.map(question => {
+    return `
+    <div class="w-full px-4 lg:w-1/2">
+      <div class="mb-12 flex lg:mb-[70px]">
+        <div
+          class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white sm:mr-6 sm:h-[60px] sm:max-w-[60px]">
+          <i class="ph ph-question-mark text-white text-[32px]"></i>
+        </div>
+        <div class="w-full">
+          <h3 class="mb-6 text-xl font-semibold text-dark dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
+            ${question.q}
+          </h3>
+          <p class="text-base text-body-color dark:text-dark-6">
+            ${question.a}
+          </p>
+        </div>
+      </div>
+    </div>
+    `;
+  }).join("");
   return `
   <div class="container mx-auto">
       <div class="-mx-4 flex flex-wrap">
@@ -688,99 +708,7 @@ export function faqTemplate() {
         </div>
       </div>
       <div class="-mx-4 flex flex-wrap">
-        <div class="w-full px-4 lg:w-1/2">
-          <div class="mb-12 flex lg:mb-[70px]">
-            <div
-              class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white sm:mr-6 sm:h-[60px] sm:max-w-[60px]">
-              <svg width="32" height="32" viewBox="0 0 34 34" class="fill-current">
-                <path
-                  d="M17.0008 0.690674C7.96953 0.690674 0.691406 7.9688 0.691406 17C0.691406 26.0313 7.96953 33.3625 17.0008 33.3625C26.032 33.3625 33.3633 26.0313 33.3633 17C33.3633 7.9688 26.032 0.690674 17.0008 0.690674ZM17.0008 31.5032C9.03203 31.5032 2.55078 24.9688 2.55078 17C2.55078 9.0313 9.03203 2.55005 17.0008 2.55005C24.9695 2.55005 31.5039 9.0313 31.5039 17C31.5039 24.9688 24.9695 31.5032 17.0008 31.5032Z" />
-                <path
-                  d="M17.9039 6.32194C16.3633 6.05631 14.8227 6.48131 13.707 7.43756C12.5383 8.39381 11.8477 9.82819 11.8477 11.3688C11.8477 11.9532 11.9539 12.5376 12.1664 13.0688C12.3258 13.5469 12.857 13.8126 13.3352 13.6532C13.8133 13.4938 14.0789 12.9626 13.9195 12.4844C13.8133 12.1126 13.707 11.7938 13.707 11.3688C13.707 10.4126 14.132 9.50944 14.8758 8.87194C15.6195 8.23444 16.5758 7.96881 17.5852 8.18131C18.9133 8.39381 19.9758 9.50944 20.1883 10.7844C20.4539 12.3251 19.657 13.8126 18.2227 14.3969C16.8945 14.9282 16.0445 16.2563 16.0445 17.7969V21.1969C16.0445 21.7282 16.4695 22.1532 17.0008 22.1532C17.532 22.1532 17.957 21.7282 17.957 21.1969V17.7969C17.957 17.0532 18.382 16.3626 18.9664 16.1501C21.1977 15.2469 22.4727 12.9094 22.0477 10.4657C21.6758 8.39381 19.9758 6.69381 17.9039 6.32194Z" />
-                <path
-                  d="M17.0531 24.8625H16.8937C16.3625 24.8625 15.9375 25.2875 15.9375 25.8188C15.9375 26.35 16.3625 26.7751 16.8937 26.7751H17.0531C17.5844 26.7751 18.0094 26.35 18.0094 25.8188C18.0094 25.2875 17.5844 24.8625 17.0531 24.8625Z" />
-              </svg>
-            </div>
-            <div class="w-full">
-              <h3 class="mb-6 text-xl font-semibold text-dark dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                How can I pay?
-              </h3>
-              <p class="text-base text-body-color dark:text-dark-6">
-                Visa, MasterCard, and American Express credit cards are accepted. All payments are processed and secured
-                by Stripe.
-              </p>
-            </div>
-          </div>
-          <div class="mb-12 flex lg:mb-[70px]">
-            <div
-              class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white sm:mr-6 sm:h-[60px] sm:max-w-[60px]">
-              <svg width="32" height="32" viewBox="0 0 34 34" class="fill-current">
-                <path
-                  d="M17.0008 0.690674C7.96953 0.690674 0.691406 7.9688 0.691406 17C0.691406 26.0313 7.96953 33.3625 17.0008 33.3625C26.032 33.3625 33.3633 26.0313 33.3633 17C33.3633 7.9688 26.032 0.690674 17.0008 0.690674ZM17.0008 31.5032C9.03203 31.5032 2.55078 24.9688 2.55078 17C2.55078 9.0313 9.03203 2.55005 17.0008 2.55005C24.9695 2.55005 31.5039 9.0313 31.5039 17C31.5039 24.9688 24.9695 31.5032 17.0008 31.5032Z" />
-                <path
-                  d="M17.9039 6.32194C16.3633 6.05631 14.8227 6.48131 13.707 7.43756C12.5383 8.39381 11.8477 9.82819 11.8477 11.3688C11.8477 11.9532 11.9539 12.5376 12.1664 13.0688C12.3258 13.5469 12.857 13.8126 13.3352 13.6532C13.8133 13.4938 14.0789 12.9626 13.9195 12.4844C13.8133 12.1126 13.707 11.7938 13.707 11.3688C13.707 10.4126 14.132 9.50944 14.8758 8.87194C15.6195 8.23444 16.5758 7.96881 17.5852 8.18131C18.9133 8.39381 19.9758 9.50944 20.1883 10.7844C20.4539 12.3251 19.657 13.8126 18.2227 14.3969C16.8945 14.9282 16.0445 16.2563 16.0445 17.7969V21.1969C16.0445 21.7282 16.4695 22.1532 17.0008 22.1532C17.532 22.1532 17.957 21.7282 17.957 21.1969V17.7969C17.957 17.0532 18.382 16.3626 18.9664 16.1501C21.1977 15.2469 22.4727 12.9094 22.0477 10.4657C21.6758 8.39381 19.9758 6.69381 17.9039 6.32194Z" />
-                <path
-                  d="M17.0531 24.8625H16.8937C16.3625 24.8625 15.9375 25.2875 15.9375 25.8188C15.9375 26.35 16.3625 26.7751 16.8937 26.7751H17.0531C17.5844 26.7751 18.0094 26.35 18.0094 25.8188C18.0094 25.2875 17.5844 24.8625 17.0531 24.8625Z" />
-              </svg>
-            </div>
-            <div class="w-full">
-              <h3 class="mb-6 text-xl font-semibold text-dark dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                What is the refund policy?
-              </h3>
-              <p class="text-base text-body-color dark:text-dark-6">
-                You may terminate your subscription at any time and you will not be obligated to pay any
-                additional fees for upcoming subscription renewal periods.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="w-full px-4 lg:w-1/2">
-          <div class="mb-12 flex lg:mb-[70px]">
-            <div
-              class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white sm:mr-6 sm:h-[60px] sm:max-w-[60px]">
-              <svg width="32" height="32" viewBox="0 0 34 34" class="fill-current">
-                <path
-                  d="M17.0008 0.690674C7.96953 0.690674 0.691406 7.9688 0.691406 17C0.691406 26.0313 7.96953 33.3625 17.0008 33.3625C26.032 33.3625 33.3633 26.0313 33.3633 17C33.3633 7.9688 26.032 0.690674 17.0008 0.690674ZM17.0008 31.5032C9.03203 31.5032 2.55078 24.9688 2.55078 17C2.55078 9.0313 9.03203 2.55005 17.0008 2.55005C24.9695 2.55005 31.5039 9.0313 31.5039 17C31.5039 24.9688 24.9695 31.5032 17.0008 31.5032Z" />
-                <path
-                  d="M17.9039 6.32194C16.3633 6.05631 14.8227 6.48131 13.707 7.43756C12.5383 8.39381 11.8477 9.82819 11.8477 11.3688C11.8477 11.9532 11.9539 12.5376 12.1664 13.0688C12.3258 13.5469 12.857 13.8126 13.3352 13.6532C13.8133 13.4938 14.0789 12.9626 13.9195 12.4844C13.8133 12.1126 13.707 11.7938 13.707 11.3688C13.707 10.4126 14.132 9.50944 14.8758 8.87194C15.6195 8.23444 16.5758 7.96881 17.5852 8.18131C18.9133 8.39381 19.9758 9.50944 20.1883 10.7844C20.4539 12.3251 19.657 13.8126 18.2227 14.3969C16.8945 14.9282 16.0445 16.2563 16.0445 17.7969V21.1969C16.0445 21.7282 16.4695 22.1532 17.0008 22.1532C17.532 22.1532 17.957 21.7282 17.957 21.1969V17.7969C17.957 17.0532 18.382 16.3626 18.9664 16.1501C21.1977 15.2469 22.4727 12.9094 22.0477 10.4657C21.6758 8.39381 19.9758 6.69381 17.9039 6.32194Z" />
-                <path
-                  d="M17.0531 24.8625H16.8937C16.3625 24.8625 15.9375 25.2875 15.9375 25.8188C15.9375 26.35 16.3625 26.7751 16.8937 26.7751H17.0531C17.5844 26.7751 18.0094 26.35 18.0094 25.8188C18.0094 25.2875 17.5844 24.8625 17.0531 24.8625Z" />
-              </svg>
-            </div>
-            <div class="w-full">
-              <h3 class="mb-6 text-xl font-semibold text-dark dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                Can I switch plans after subscribing?
-              </h3>
-              <p class="text-base text-body-color dark:text-dark-6">
-                Yes, at any time. Upgrade differences will be billed immediately and downgrades will appear as a credit
-                on the next invoice.
-              </p>
-            </div>
-          </div>
-          <div class="mb-12 flex lg:mb-[70px]">
-            <div
-              class="mr-4 flex h-[50px] w-full max-w-[50px] items-center justify-center rounded-xl bg-primary text-white sm:mr-6 sm:h-[60px] sm:max-w-[60px]">
-              <svg width="32" height="32" viewBox="0 0 34 34" class="fill-current">
-                <path
-                  d="M17.0008 0.690674C7.96953 0.690674 0.691406 7.9688 0.691406 17C0.691406 26.0313 7.96953 33.3625 17.0008 33.3625C26.032 33.3625 33.3633 26.0313 33.3633 17C33.3633 7.9688 26.032 0.690674 17.0008 0.690674ZM17.0008 31.5032C9.03203 31.5032 2.55078 24.9688 2.55078 17C2.55078 9.0313 9.03203 2.55005 17.0008 2.55005C24.9695 2.55005 31.5039 9.0313 31.5039 17C31.5039 24.9688 24.9695 31.5032 17.0008 31.5032Z" />
-                <path
-                  d="M17.9039 6.32194C16.3633 6.05631 14.8227 6.48131 13.707 7.43756C12.5383 8.39381 11.8477 9.82819 11.8477 11.3688C11.8477 11.9532 11.9539 12.5376 12.1664 13.0688C12.3258 13.5469 12.857 13.8126 13.3352 13.6532C13.8133 13.4938 14.0789 12.9626 13.9195 12.4844C13.8133 12.1126 13.707 11.7938 13.707 11.3688C13.707 10.4126 14.132 9.50944 14.8758 8.87194C15.6195 8.23444 16.5758 7.96881 17.5852 8.18131C18.9133 8.39381 19.9758 9.50944 20.1883 10.7844C20.4539 12.3251 19.657 13.8126 18.2227 14.3969C16.8945 14.9282 16.0445 16.2563 16.0445 17.7969V21.1969C16.0445 21.7282 16.4695 22.1532 17.0008 22.1532C17.532 22.1532 17.957 21.7282 17.957 21.1969V17.7969C17.957 17.0532 18.382 16.3626 18.9664 16.1501C21.1977 15.2469 22.4727 12.9094 22.0477 10.4657C21.6758 8.39381 19.9758 6.69381 17.9039 6.32194Z" />
-                <path
-                  d="M17.0531 24.8625H16.8937C16.3625 24.8625 15.9375 25.2875 15.9375 25.8188C15.9375 26.35 16.3625 26.7751 16.8937 26.7751H17.0531C17.5844 26.7751 18.0094 26.35 18.0094 25.8188C18.0094 25.2875 17.5844 24.8625 17.0531 24.8625Z" />
-              </svg>
-            </div>
-            <div class="w-full">
-              <h3 class="mb-6 text-xl font-semibold text-dark dark:text-white sm:text-2xl lg:text-xl xl:text-2xl">
-                Is the documentation sufficient and detailed?
-              </h3>
-              <p class="text-base text-body-color dark:text-dark-6">
-                ApiBee is well-documented, featuring detailed setup guides and practical code
-                samples. Our documentation is designed to be user-friendly, and our support
-                team is always available for any questions you may have.
-              </p>
-            </div>
-          </div>
-        </div>
+        ${faqHtml}
       </div>
     </div>
     <div>
@@ -1056,7 +984,7 @@ export function pricingTemplate() {
   `;
 }
 
-export function ctaTemplate() {
+export function ctaTemplate(headline = "Headline", message = "message", buttonText) {
   return `
   <div class="container mx-auto">
       <div class="relative overflow-hidden">
@@ -1064,9 +992,9 @@ export function ctaTemplate() {
           <div class="w-full px-4">
             <div class="mx-auto max-w-[570px] text-center">
               <h2 class="mb-2.5 text-3xl font-bold text-white md:text-[38px] md:leading-[1.44]">
-                <span>Want to Elevate Your Testing?</span>
+                <span>${headline}</span>
                 <span class="text-3xl font-normal md:text-[40px]">
-                  Start Now!
+                  ${message}
                 </span>
               </h2>
               <p class="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
@@ -1074,7 +1002,7 @@ export function ctaTemplate() {
               </p>
               <a href="javascript:void(0)"
                 class="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]">
-                Start testing in <strong>10</strong> seconds
+                ${buttonText}
               </a>
             </div>
           </div>
@@ -1102,7 +1030,7 @@ export function ctaTemplate() {
   `;
 }
 
-export function aboutTemplate() {
+export function aboutTemplate(headline = "Headline", message = "message") {
   return `
   <div class="container">
       <div class="wow fadeInUp" data-wow-delay=".2s">
@@ -1111,16 +1039,10 @@ export function aboutTemplate() {
             <div class="mb-12 max-w-[540px] lg:mb-0">
               <h2
                 class="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
-                Simplify Testing, Prevent Issues, Accelerate Innovation.
+                ${headline}
               </h2>
               <p class="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                Our platform simplifies software testing with proactive monitoring, automated testing, and AI-driven
-                insights to keep your website, APIs, and software running smoothly. By catching issues early, such as
-                downtime or SSL expiration, we help you avoid disruptions before they affect users.
-                <br />
-                <br />
-                With an easy-to-use interface, our solution streamlines testing, allowing your business to focus on
-                innovation and new feature development, while minimizing risks and improving performance.
+                ${message}
               </p>
 
               <a href="javascript:void(0)"
@@ -1143,7 +1065,7 @@ export function aboutTemplate() {
   `;
 }
 
-export function featuresTemplate(headline = "Headline", message = "Message", features = []) {
+export function featuresTemplate(headline = "Headline", message = "message", features = []) {
   let columnsCount = Math.min(4, features.length);
   
   var featuresHtml = features.map(feature => {
@@ -1641,7 +1563,7 @@ export function navTemplate(menuItemCssClass, themeSwitcherCssClass, textDarkCss
   `;
 }
 
-export function bannerTemplate(headline, text) {
+export function bannerTemplate(headline = "Headline", message = "message") {
   return `
   <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3"></div>
       <div class="container">
@@ -1652,7 +1574,7 @@ export function bannerTemplate(headline, text) {
                 ${headline}
               </h1>
               <p class="mb-5 text-base font-medium text-white sm:text-lg">
-                ${text}
+                ${message}
               </p>
               <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
               <li>
