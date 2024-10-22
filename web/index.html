@@ -45,11 +45,13 @@
   <!-- ====== CTA Section End -->
 
   <!-- ====== Pricing Section Start -->
-  <section id="pricing" class="relative z-20 overflow-hidden bg-white pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]"></section>
+  <section id="pricing"
+    class="relative z-20 overflow-hidden bg-white pb-12 pt-20 dark:bg-dark lg:pb-[90px] lg:pt-[120px]"></section>
   <!-- ====== Pricing Section End -->
 
   <!-- ====== FAQ Section Start -->
-  <section id="faq" class="relative z-20 overflow-hidden bg-gray-1 pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]"></section>
+  <section id="faq" class="relative z-20 overflow-hidden bg-gray-1 pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
+  </section>
   <!-- ====== FAQ Section End -->
 
   <!-- ====== Blog Section Start -->
@@ -61,7 +63,8 @@
   <!-- ====== Contact End ====== -->
 
   <!-- ====== Footer Section Start -->
-  <footer id="footer" class="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]" data-wow-delay=".15s"></footer>
+  <footer id="footer" class="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]" data-wow-delay=".15s">
+  </footer>
   <!-- ====== Footer Section End -->
 
   <!-- ====== Back To Top Start -->
@@ -76,27 +79,41 @@
   <script type="module" src="assets/js/index.js"></script>
   <script src="assets/js/swiper-bundle.min.js"></script>
   <script>
-    window._featuresHeanline = "Key features of APIBee";
-    window._featuresMessage = "All-in-One solution for effortless website testing and monitoring.";
-    window._features = [{
-      icon: "ph-code-simple",
-      title: "Low-Code Configuration",
-      text: "Widely-known and simple, software engineer's friendly, YAML and JSON declarative configurations."
-    },
-    {
-      icon: "ph-activity",
-      title: "Website Monitoring",
-      text: "Stay ahead of website issues with real-time monitoring – get notified instantly about downtime, SSL expirations, and more before they impact your business!"
-    },
-    {
-      icon: "ph-checks",
-      title: "Tests Automation",
-      text: "Keep your APIs functioning optimally with automated testing that identifies issues proactively, preventing negative impacts on user experience."
-    },{
-      icon: "ph-head-circuit",
-      title: "AI-augmented Validation",
-      text: "Uncover hidden issues through deeper content analysis that regular testing approach might miss."
-    }];
+    window.config = {
+      featuresHeanline: "Key features of APIBee",
+      featuresMessage: "All-in-One solution for effortless website testing and monitoring.",
+      features: [{
+        icon: "ph-code-simple",
+        title: "Low-Code Configuration",
+        text: "Widely-known and simple, software engineer's friendly, YAML and JSON declarative configurations."
+      },
+      {
+        icon: "ph-activity",
+        title: "Website Monitoring",
+        text: "Stay ahead of website issues with real-time monitoring – get notified instantly about downtime, SSL expirations, and more before they impact your business!"
+      },
+      {
+        icon: "ph-checks",
+        title: "Tests Automation",
+        text: "Keep your APIs functioning optimally with automated testing that identifies issues proactively, preventing negative impacts on user experience."
+      }, {
+        icon: "ph-head-circuit",
+        title: "AI-augmented Validation",
+        text: "Uncover hidden issues through deeper content analysis that regular testing approach might miss."
+      }],
+      aboutTitle: "Simplify Testing, Prevent Issues, Accelerate Innovation.",
+      aboutText: "Our platform simplifies software testing with proactive monitoring, automated testing, and AI-driven insights to keep your website, APIs, and software running smoothly. By catching issues early, such as downtime or SSL expiration, we help you avoid disruptions before they affect users.<br/><br/>With an easy-to-use interface, our solution streamlines testing, allowing your business to focus on innovation and new feature development, while minimizing risks and improving performance.",
+      ctaHeadline: "Want to Elevate Your Testing?",
+      ctaMessage: "Start Now!",
+      ctaButtonText: "Start testing in 10 seconds",
+      faqs: [
+        { q: "How can I pay?", a: "Visa, MasterCard, and American Express credit cards are accepted. All payments are processed and secured by Stripe." },
+        { q: "What is the refund policy?", a: "You may terminate your subscription at any time and you will not be obligated to pay any additional fees for upcoming subscription renewal periods." },
+        { q: "Can I switch plans after subscribing?", a: "Yes, at any time. Upgrade differences will be billed immediately and downgrades will appear as a credit on the next invoice." },
+        { q: "Is the documentation sufficient and detailed?", a: "ApiBee is well-documented, featuring detailed setup guides and practical code samples. Our documentation is designed to be user-friendly, and our support team is always available for any questions you may have." },
+      ]
+    };
+
   </script>
 </body>
 
