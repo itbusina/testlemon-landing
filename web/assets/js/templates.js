@@ -116,7 +116,7 @@ export function footerTemplate() {
               </li>
               <li>
                 <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
-                  DMARK monitoring
+                  DMARC monitoring
                 </a>
               </li>
               <li>
@@ -1264,6 +1264,53 @@ export function featuresTemplate() {
   `;
 }
 
+export function features3Template(headline = "Headline", message = "Message", features = []) {
+  var featuresHtml = features.map(feature => {
+    return `
+    <div class="w-full px-4 md:w-1 lg:w-1/3">
+          <div class="wow fadeInUp group mb-12" data-wow-delay=".1s">
+            <div
+              class="relative z-10 mb-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] bg-primary">
+              <span
+                class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] bg-primary bg-opacity-20 duration-300 group-hover:rotate-45"></span>
+              <i class="ph ${feature.icon} text-white text-[32px]"></i>
+            </div>
+            <h4 class="mb-3 text-xl font-bold text-dark dark:text-white">
+              ${feature.title}
+            </h4>
+            <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
+              ${feature.text}
+            </p>
+            <a href="javascript:void(0)"
+              class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary">
+              Learn More
+            </a>
+          </div>
+        </div>
+    `;
+  }).join("");
+
+  return `
+  <div class="container">
+      <div class="-mx-4 flex flex-wrap">
+        <div class="w-full px-4">
+          <div class="mx-auto mb-12 max-w-[485px] text-center lg:mb-[70px]">
+            <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+              ${headline}
+            </h2>
+            <p class="text-base text-body-color dark:text-dark-6">
+              ${message}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="-mx-4 flex flex-wrap">
+        ${featuresHtml}
+      </div>
+    </div>
+  `;
+}
+
 export function homeTemplate() {
   return `
   <div class="container">
@@ -1566,7 +1613,7 @@ export function navTemplate(menuItemCssClass, themeSwitcherCssClass, textDarkCss
                     </a>
                     <a href="404.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      DMARK monitoring
+                      DMARC monitoring
                     </a>
                   </div>
                 </li>
@@ -1601,7 +1648,7 @@ export function navTemplate(menuItemCssClass, themeSwitcherCssClass, textDarkCss
                     </a>
                     <a href="contact.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      DMARK testing
+                      DMARC testing
                     </a>
                     <a href="blog-details.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
@@ -1717,12 +1764,19 @@ export function bannerTemplate(headline, text) {
         <div class="flex flex-wrap items-center -mx-4">
           <div class="w-full px-4">
             <div class="text-center">
-              <h1 class="mb-4 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
+              <h1 class="mb-4 text-3xl font-bold leading-snug text-white sm:text-4xl">
                 ${headline}
               </h1>
-              <p class="mb-5 text-base text-body-color dark:text-dark-6">
+              <p class="mb-5 text-base font-medium text-white sm:text-lg">
                 ${text}
               </p>
+              <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
+              <li>
+                <a href="https://apibee.app/" class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
+                  Start monitoring for FREE
+                </a>
+              </li>
+            </ul>
             </div>
           </div>
         </div>
