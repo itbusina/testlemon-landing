@@ -80,7 +80,7 @@ export function footerTemplate() {
             <h4 class="mb-9 text-lg font-semibold text-white">Features</h4>
             <ul>
               <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                <a href="uptime-monitoring.html" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   Uptime monitoring
                 </a>
               </li>
@@ -1583,35 +1583,35 @@ export function navTemplate(menuItemCssClass, themeSwitcherCssClass, textDarkCss
                   </a>
                   <div
                     class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                    <a href="about.html"
+                    <a href="uptime-monitoring.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Uptime monitoring
                     </a>
-                    <a href="pricing.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Website monitoring
                     </a>
-                    <a href="contact.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Keyword monitoring
                     </a>
-                    <a href="blog-grids.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       SSL monitoring
                     </a>
-                    <a href="signin.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       TLS monitoring
                     </a>
-                    <a href="blog-details.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       DNS monitoring
                     </a>
-                    <a href="signup.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Domain monitoring
                     </a>
-                    <a href="404.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       DMARC monitoring
                     </a>
@@ -1630,31 +1630,31 @@ export function navTemplate(menuItemCssClass, themeSwitcherCssClass, textDarkCss
                   </a>
                   <div
                     class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                    <a href="about.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       APIs testing
                     </a>
-                    <a href="about.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Tests automation
                     </a>
-                    <a href="contact.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       AI-augmented testing
                     </a>
-                    <a href="contact.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Domain testing
                     </a>
-                    <a href="contact.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       DMARC testing
                     </a>
-                    <a href="blog-details.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Performance testing
                     </a>
-                    <a href="blog-details.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Load testing
                     </a>
@@ -1679,19 +1679,19 @@ export function navTemplate(menuItemCssClass, themeSwitcherCssClass, textDarkCss
                   </a>
                   <div
                     class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                    <a href="about.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Documentation
                     </a>
-                    <a href="pricing.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Blog
                     </a>
-                    <a href="contact.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       FAQs
                     </a>
-                    <a href="blog-grids.html"
+                    <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Support
                     </a>
