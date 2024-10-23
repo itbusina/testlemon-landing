@@ -222,7 +222,7 @@ export function addFooter(selector = 'footer') {
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                <a href="index.html#pricing" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   Pricing
                 </a>
               </li>
@@ -1552,7 +1552,8 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                   </div>
                 </li>
                 <li class="group relative">
-                  <a href="#pricing"
+                  <a href="index.html#pricing"
+                    scrollTo="#pricing"
                     class="flex ud-menu-scroll mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
                     Pricing
                   </a>
@@ -1765,8 +1766,8 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
 
   pageLink.forEach((elem) => {
     elem.addEventListener("click", (e) => {
-      e.preventDefault();
-      let element = document.querySelector(elem.getAttribute("href"));
+      // e.preventDefault();
+      let element = document.querySelector(elem.getAttribute("scrollTo"));
       if (element) {
         element.scrollIntoView({
           behavior: "smooth",
@@ -1786,7 +1787,7 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
 
     for (let i = 0; i < sections.length; i++) {
       const currLink = sections[i];
-      const val = currLink.getAttribute("href");
+      const val = currLink.getAttribute("scrollTo");
       const refElement = document.querySelector(val);
 
       // continue if element does not exist in this page
