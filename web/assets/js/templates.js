@@ -155,6 +155,21 @@ export function addFooter(selector = 'footer') {
             <h4 class="mb-9 text-lg font-semibold text-white">Features</h4>
             <ul>
               <li>
+                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  Tests automation
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  AI-augmented testing
+                </a>
+              </li>
+              <li>
+                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  APIs testing
+                </a>
+              </li>
+              <li>
                 <a href="uptime-monitoring.html" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   Uptime monitoring
                 </a>
@@ -162,6 +177,11 @@ export function addFooter(selector = 'footer') {
               <li>
                 <a href="website-monitoring.html" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   Website monitoring
+                </a>
+              </li>
+              <li>
+                <a href="keyword-monitoring.html" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  Keyword monitoring
                 </a>
               </li>
               <li>
@@ -185,28 +205,8 @@ export function addFooter(selector = 'footer') {
                 </a>
               </li>
               <li>
-                <a href="keyword-monitoring.html" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
-                  Keyword monitoring
-                </a>
-              </li>
-              <li>
                 <a href="dmarc-monitoring.html" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   DMARC monitoring
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
-                  APIs testing
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
-                  Tests automation
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
-                  AI-augmented testing
                 </a>
               </li>
             </ul>
@@ -1472,6 +1472,41 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                 <li class="submenu-item group relative">
                   <a href="javascript:void(0)"
                     class="flex mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
+                    Testing
+
+                    <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
+                    </svg>
+                  </a>
+                  <div
+                    class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                    <a href="#"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Tests automation
+                    </a>
+                    <a href="#"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      AI-augmented testing
+                    </a>
+                    <a href="#"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      APIs testing
+                    </a>
+                    <a href="#"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Domain testing
+                    </a>
+                    <a href="#"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      DMARC testing
+                    </a>
+                  </div>
+                </li>
+                <li class="submenu-item group relative">
+                  <a href="javascript:void(0)"
+                    class="flex mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
                     Monitoring
 
                     <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
@@ -1513,41 +1548,6 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                     <a href="dmarc-monitoring.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       DMARC monitoring
-                    </a>
-                  </div>
-                </li>
-                <li class="submenu-item group relative">
-                  <a href="javascript:void(0)"
-                    class="flex mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
-                    Testing
-
-                    <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path
-                        d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
-                    </svg>
-                  </a>
-                  <div
-                    class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                    <a href="#"
-                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      APIs testing
-                    </a>
-                    <a href="#"
-                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      Tests automation
-                    </a>
-                    <a href="#"
-                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      AI-augmented testing
-                    </a>
-                    <a href="#"
-                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      Domain testing
-                    </a>
-                    <a href="#"
-                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      DMARC testing
                     </a>
                   </div>
                 </li>
