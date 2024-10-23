@@ -217,7 +217,7 @@ export function addFooter(selector = 'footer') {
             <h4 class="mb-9 text-lg font-semibold text-white">Company</h4>
             <ul>
               <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                <a href="index.html#about" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   About
                 </a>
               </li>
@@ -242,7 +242,7 @@ export function addFooter(selector = 'footer') {
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                <a href="index.html#contact" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   Contact us
                 </a>
               </li>
@@ -286,7 +286,7 @@ export function addFooter(selector = 'footer') {
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                <a href="index.html#faq" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   Help center
                 </a>
               </li>
