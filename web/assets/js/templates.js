@@ -1579,11 +1579,13 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Blog
                     </a>
-                    <a href="#"
+                    <a href="index.html#faq"
+                      scrollTo="#faq"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       FAQs
                     </a>
-                    <a href="#"
+                    <a href="index.html#contact"
+                      scrollTo="#contact"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Support
                     </a>
