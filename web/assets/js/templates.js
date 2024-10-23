@@ -1173,7 +1173,7 @@ export function addFeatures(selector = 'features', sectionName = "Features", hea
             <p class="mb-8 text-body-color dark:text-dark-6 lg:mb-9">
               ${feature.text}
             </p>
-            <a href="javascript:void(0)"
+            <a href="${feature.link}"
               class="text-base font-medium text-dark hover:text-primary dark:text-white dark:hover:text-primary">
               Learn More
             </a>
@@ -1492,7 +1492,7 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                     </a>
                     <a href="api-testing.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      APIs testing
+                      API testing
                     </a>
                     <a href="domain-monitoring.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
