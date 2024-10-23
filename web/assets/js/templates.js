@@ -209,16 +209,6 @@ export function addFooter(selector = 'footer') {
                   AI-augmented testing
                 </a>
               </li>
-              <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
-                  Performnace testing
-                </a>
-              </li>
-              <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
-                  Load testing
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -1558,14 +1548,6 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                     <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       DMARC testing
-                    </a>
-                    <a href="#"
-                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      Performance testing
-                    </a>
-                    <a href="#"
-                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      Load testing
                     </a>
                   </div>
                 </li>
