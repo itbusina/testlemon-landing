@@ -1494,11 +1494,11 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       APIs testing
                     </a>
-                    <a href="#"
+                    <a href="domain-monitoring.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Domain testing
                     </a>
-                    <a href="#"
+                    <a href="dmarc-monitoring.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       DMARC testing
                     </a>
@@ -1811,7 +1811,7 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
   window.document.addEventListener("scroll", onScroll);
 }
 
-export function addBanner(selector = 'banner', headline = "Headline", message = "message") {
+export function addBanner(selector = 'banner', headline = "Headline", message = "message", buttonText = "Start for FREE") {
   let html = `
   <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3"></div>
       <div class="container">
@@ -1827,7 +1827,7 @@ export function addBanner(selector = 'banner', headline = "Headline", message = 
               <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
               <li>
                 <a href="https://apibee.app/" class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
-                  Start monitoring for FREE
+                  ${buttonText}
                 </a>
               </li>
             </ul>
