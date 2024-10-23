@@ -1,3 +1,4 @@
+import './page.js';
 import { _variables } from './variables.js';
 import {
     addNav,
