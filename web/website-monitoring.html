@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Monitoring | ApiBee</title>
+  <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="assets/css/animate.css" />
+  <link rel="stylesheet" href="assets/css/tailwind.css" />
+  <link rel="stylesheet" href="assets/css/page.css" />
+
+  <!-- ==== WOW JS ==== -->
+  <script src="assets/js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+</head>
+
+<body>
+  <!-- ====== Navbar Section Start -->
+  <div id="nav" class="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-transparent "></div>
+  <!-- ====== Navbar Section End -->
+
+  <!-- ====== Banner Section Start -->
+  <section id="banner"
+    class=" bg-primary relative z-10 overflow-hidden pb-[60px] pt-[120px] dark:bg-dark md:pt-[130px] lg:pt-[160px]">
+  </section>
+  <!-- ====== Banner Section End -->
+
+  <!-- ====== Features Section Start -->
+  <section id="features" class="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]"></section>
+  <!-- ====== Features Section End -->
+
+  <!-- ====== About Section Start -->
+  <section id="about" class="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]"></section>
+  <!-- ====== About Section End -->
+
+  <!-- ====== CTA Section Start -->
+  <section id="cta" class="relative z-10 overflow-hidden bg-primary py-20 lg:py-[115px]"></section>
+  <!-- ====== CTA Section End -->
+
+  <!-- ====== FAQ Section Start -->
+  <section id="faq" class="relative z-20 overflow-hidden bg-gray-1 pb-8 pt-20 dark:bg-dark lg:pb-[50px] lg:pt-[120px]">
+  </section>
+  <!-- ====== FAQ Section End -->
+
+  <!-- ====== Footer Section Start -->
+  <footer id="footer" class="wow fadeInUp relative z-10 bg-[#090E34] pt-20 lg:pt-[100px]" data-wow-delay=".15s">
+  </footer>
+  <!-- ====== Footer Section End -->
+
+  <!-- ====== Back To Top Start -->
+  <section id="scroll"></section>
+  <!-- ====== Back To Top End -->
+
+  <!-- ====== Cookie Banner -->
+  <section id="gdpr"></section>
+  <!-- ====== Cookie Banner End -->
+
+  <!-- ====== All Scripts -->
+  <script type="module" src="assets/js/features-page.js"></script>
+  <script>
+    window.config = {
+      bannerHealine: "Ensure uptime and security with comprehensive <strong>website monitoring</strong>",
+      bannerMessage: "Our website monitoring tool offers 24/7 insights, detecting downtime, security issues, and broken links. Get instant alerts to resolve problems fast and keep your site running smoothly.",
+      featuresHeanline: "Keep your website running smoothly.",
+      featuresMessage: "Ensure your website is always online and secure with our monitoring tool.",
+      features: [{
+        icon: "ph-bell-ringing",
+        title: "Uptime Monitoring",
+        text: "Track website availability and receive instant alerts if downtime occurs."
+      },
+      {
+        icon: "ph-article",
+        title: "Broken Link Detection",
+        text: "Track links and content which should not appear on production website."
+      },
+      {
+        icon: "ph-sliders-horizontal",
+        title: "SSL Certificate Monitoring",
+        text: "Ensure your SSL certificate is valid and prevent security warnings."
+      }],
+      aboutTitle: "Stay ahead with 24/7 website monitoring.",
+      aboutText: "Our website monitoring tool provides real-time insights to help you keep your site online and secure. Instantly detect downtime, security breaches, broken links, and other critical issues. With 24/7 monitoring and instant alerts, you can quickly address problems before they impact your visitors, ensuring a smooth and uninterrupted experience.<br/><br/> Stay in control of your website’s availability and performance without the hassle",
+      ctaHeadline: "Start Monitoring Your Website Today!",
+      ctaMessage: "",
+      ctaButtonText: "Start monitoring for FREE",
+      faqs: [
+        { q: "Can I monitor all website pages for incorrect content?", a: "Yes, tool provides capability to check all pages found from website sitemap." },
+        { q: "How do I set up monitoring for my website?", a: "Setting up monitoring is simple. Just sign up, add your website URL, and customize your settings. You’ll will recieve alerts in case issues." },
+        { q: "How does your website monitoring tool work?", a: "Our tool continuously checks your website’s availability and performance by sending requests at regular intervals. If it detects any issues, it sends instant alerts so you can take action." },
+        { q: "What types of issues can the tool detect?", a: "We are continiously adding validators for any need. Currently you can check Domain, SSL, DNS, DMARC, TLS settings, incorrect status codes, slow response time and more." },
+      ]
+    };
+  </script>
+</body>
+
+</html>

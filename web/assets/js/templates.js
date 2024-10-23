@@ -160,7 +160,7 @@ export function addFooter(selector = 'footer') {
                 </a>
               </li>
               <li>
-                <a href="javascript:void(0)" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                <a href="website-monitoring.html" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   Website monitoring
                 </a>
               </li>
@@ -1496,7 +1496,7 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Uptime monitoring
                     </a>
-                    <a href="#"
+                    <a href="website-monitoring.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Website monitoring
                     </a>
