@@ -1,13 +1,13 @@
-export function insertTemplate(selector, position, html) {
+function insertTemplate(selector, html) {
   let element = document.getElementById(selector);
 
   if (element != null) {
-    element.insertAdjacentHTML(position, html);
+    element.insertAdjacentHTML('beforeend', html);
   }
 }
 
-export function cookieConsentTemplate(privacyUrl) {
-  return `
+export function addCookieConsent(selector = 'gdpr', trackingID, privacyUrl) {
+  let html = `
     <div id="gdpr-banner" style="display: none;" class="text-xs fixed bottom-8 left-4 z-[999] inline-flex items-center gap-[10px] rounded-lg bg-white px-[14px] py-2 shadow-2 dark:bg-dark-2 sm:left-9">
         <span class="font-medium text-dark-3 dark:text-dark-6">This website uses cookies.<br /><a href="${privacyUrl}"
             style="text-decoration: underline;">Learn more</a>
@@ -18,18 +18,93 @@ export function cookieConsentTemplate(privacyUrl) {
         <button class="font-medium text-dark-3 dark:text-dark-6" onclick="handleGDPRConsent(false)">Reject</button>
     </div>
     `;
+
+  insertTemplate(selector, html);
+
+  // Check if the user has given consent
+  const consentGiven = localStorage.getItem("gdpr-consent") === "accepted";
+
+  // Check if consent is already given
+  document.addEventListener("DOMContentLoaded", function () {
+    if (!consentGiven) {
+      // Show the consent banner
+      document.getElementById("gdpr-banner").style.display = "flex";
+    }
+  });
+
+  // Function to handle consent
+  window.handleGDPRConsent = function (consentGiven) {
+    localStorage.setItem("gdpr-consent", consentGiven ? "accepted" : "rejected");
+    document.getElementById("gdpr-banner").style.display = "none";
+  }
+
+  // Function to load Google Analytics script
+  function loadGAScript(trackingID) {
+    const gaScript = document.createElement('script');
+    gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=' + trackingID;  // Replace with your Tracking ID
+    gaScript.async = true;
+    document.head.appendChild(gaScript);
+
+    // Initialize GA after script is loaded
+    gaScript.onload = function () {
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', trackingID);
+    };
+  }
+
+  // Only load GA if consent is given
+  if (consentGiven) {
+    loadGAScript(trackingID);
+  }
 }
 
-export function scrollTopTemplate() {
-  return `
+export function addScrollTop(selector = 'scroll') {
+  let html = `
     <a href="javascript:void(0)" class="back-to-top fixed bottom-8 left-auto right-8 z-[999] hidden h-10 w-10 items-center justify-center rounded-md bg-primary text-white shadow-md transition duration-300 ease-in-out hover:bg-dark">
         <span class="mt-[6px] h-3 w-3 rotate-45 border-l border-t border-white"></span>
     </a>
     `;
+
+  insertTemplate(selector, html);
+
+  // ====== scroll top js
+  function scrollTo(element, to = 0, duration = 500) {
+    const start = element.scrollTop;
+    const change = to - start;
+    const increment = 20;
+    let currentTime = 0;
+
+    const animateScroll = () => {
+      currentTime += increment;
+
+      const val = Math.easeInOutQuad(currentTime, start, change, duration);
+
+      element.scrollTop = val;
+
+      if (currentTime < duration) {
+        setTimeout(animateScroll, increment);
+      }
+    };
+
+    animateScroll();
+  }
+
+  Math.easeInOutQuad = function (t, b, c, d) {
+    t /= d / 2;
+    if (t < 1) return (c / 2) * t * t + b;
+    t--;
+    return (-c / 2) * (t * (t - 2) - 1) + b;
+  };
+
+  document.querySelector(".back-to-top").onclick = () => {
+    scrollTo(document.documentElement);
+  };
 }
 
-export function footerTemplate() {
-  return `
+export function addFooter(selector = 'footer') {
+  let html = `
     <div class="container">
       <div class="-mx-4 flex flex-wrap">
         <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-4/12">
@@ -467,10 +542,12 @@ export function footerTemplate() {
       </span>
     </div>
     `;
+
+  insertTemplate(selector, html);
 }
 
-export function contactTemplate(address, email) {
-  return `
+export function addContact(selector = 'contact', address, email) {
+  let html = `
   <div class="absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark"></div>
     <div class="absolute left-0 top-0 -z-[1] h-1/2 w-full bg-[#E9F9FF] dark:bg-dark-700 lg:h-[45%] xl:h-1/2"></div>
     <div class="container px-4">
@@ -564,10 +641,12 @@ export function contactTemplate(address, email) {
       </div>
     </div>
   `;
+
+  insertTemplate(selector, html);
 }
 
-export function blogTemplate() {
-  return `
+export function addBlog(selector = 'blog') {
+  let html = `
   <div class="container mx-auto">
       <div class="-mx-4 flex flex-wrap justify-center">
         <div class="w-full px-4">
@@ -667,9 +746,11 @@ export function blogTemplate() {
       </div>
     </div>
   `;
+
+  insertTemplate(selector, html);
 }
 
-export function faqTemplate(questions = []) {
+export function addFaq(selector = 'faq', questions = []) {
   let faqHtml = questions.map(question => {
     return `
     <div class="w-full px-4 lg:w-1/2">
@@ -690,7 +771,8 @@ export function faqTemplate(questions = []) {
     </div>
     `;
   }).join("");
-  return `
+
+  let html = `
   <div class="container mx-auto">
       <div class="-mx-4 flex flex-wrap">
         <div class="w-full px-4">
@@ -802,10 +884,21 @@ export function faqTemplate(questions = []) {
       </span>
     </div>
   `;
+
+  insertTemplate(selector, html);
+
+  // ===== Faq accordion
+  const faqs = document.querySelectorAll(".single-faq");
+  faqs.forEach((el) => {
+    el.querySelector(".faq-btn").addEventListener("click", () => {
+      el.querySelector(".icon").classList.toggle("rotate-180");
+      el.querySelector(".faq-content").classList.toggle("hidden");
+    });
+  });
 }
 
-export function pricingTemplate() {
-  return `
+export function addPricing(selector = 'pricing') {
+  let html = `
   <div class="container mx-auto">
       <div class="-mx-4 flex flex-wrap">
         <div class="w-full px-4">
@@ -982,10 +1075,12 @@ export function pricingTemplate() {
       </div>
     </div>
   `;
+
+  insertTemplate(selector, html);
 }
 
-export function ctaTemplate(headline = "Headline", message = "message", buttonText) {
-  return `
+export function addCta(selector = 'cta', headline = "Headline", message = "message", buttonText) {
+  let html = `
   <div class="container mx-auto">
       <div class="relative overflow-hidden">
         <div class="-mx-4 flex flex-wrap items-stretch">
@@ -1028,10 +1123,12 @@ export function ctaTemplate(headline = "Headline", message = "message", buttonTe
       </span>
     </div>
   `;
+
+  insertTemplate(selector, html);
 }
 
-export function aboutTemplate(headline = "Headline", message = "message") {
-  return `
+export function addAbout(selector = 'about', headline = "Headline", message = "message") {
+  let html = `
   <div class="container">
       <div class="wow fadeInUp" data-wow-delay=".2s">
         <div class="-mx-4 flex flex-wrap items-center">
@@ -1063,11 +1160,13 @@ export function aboutTemplate(headline = "Headline", message = "message") {
       </div>
     </div>
   `;
+
+  insertTemplate(selector, html);
 }
 
-export function featuresTemplate(headline = "Headline", message = "message", features = []) {
+export function addFeatures(selector = 'features', headline = "Headline", message = "message", features = []) {
   let columnsCount = Math.min(4, features.length);
-  
+
   var featuresHtml = features.map(feature => {
     return `
     <div class="w-full px-4 md:w-1 lg:w-1/${columnsCount}">
@@ -1093,7 +1192,7 @@ export function featuresTemplate(headline = "Headline", message = "message", fea
     `;
   }).join("");
 
-  return `
+  let html = `
   <div class="container">
       <div class="-mx-4 flex flex-wrap">
         <div class="w-full px-4">
@@ -1115,10 +1214,12 @@ export function featuresTemplate(headline = "Headline", message = "message", fea
       </div>
     </div>
   `;
+
+  insertTemplate(selector, html);
 }
 
-export function homeTemplate() {
-  return `
+export function addHero(selector = 'home') {
+  let html = `
   <div class="container">
       <div class="-mx-4 flex flex-wrap items-center">
         <div class="w-full px-4">
@@ -1353,10 +1454,12 @@ export function homeTemplate() {
       </div>
     </div>
   `;
+
+  insertTemplate(selector, html);
 }
 
-export function navTemplate(menuItemCssClass, themeSwitcherCssClass, textDarkCssClass, logoCssClass, darkLogoCssClass, focusButtonColor) {
-  return `
+export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass, textDarkCssClass, logoCssClass, darkLogoCssClass, focusButtonColor) {
+  let html = `
   <div class="container">
       <div class="relative -mx-4 flex items-center justify-between">
         <div class="w-60 max-w-full px-4">
@@ -1561,10 +1664,173 @@ export function navTemplate(menuItemCssClass, themeSwitcherCssClass, textDarkCss
       </div>
     </div>
   `;
+
+  insertTemplate(selector, html);
+
+  // ======= Sticky
+  window.onscroll = function () {
+    const ud_header = document.querySelector(".ud-header");
+    const sticky = ud_header.offsetTop;
+    const logo = document.querySelectorAll(".header-logo");
+
+    if (window.pageYOffset > sticky) {
+      ud_header.classList.add("sticky");
+    } else {
+      ud_header.classList.remove("sticky");
+    }
+
+    if (logo.length) {
+      // === logo change
+      if (ud_header.classList.contains("sticky")) {
+        document.querySelector(".header-logo").src =
+          "assets/images/logo/logo.svg"
+      } else {
+        document.querySelector(".header-logo").src =
+          "assets/images/logo/logo-white.svg"
+      }
+    }
+
+    if (document.documentElement.classList.contains("dark")) {
+      if (logo.length) {
+        // === logo change
+        if (ud_header.classList.contains("sticky")) {
+          document.querySelector(".header-logo").src =
+            "assets/images/logo/logo-white.svg"
+        }
+      }
+    }
+
+    // show or hide the back-top-top button
+    const backToTop = document.querySelector(".back-to-top");
+    if (
+      document.body.scrollTop > 50 ||
+      document.documentElement.scrollTop > 50
+    ) {
+      backToTop.style.display = "flex";
+    } else {
+      backToTop.style.display = "none";
+    }
+  };
+
+  // ===== responsive navbar
+  let navbarToggler = document.querySelector("#navbarToggler");
+  const navbarCollapse = document.querySelector("#navbarCollapse");
+
+  navbarToggler.addEventListener("click", () => {
+    navbarToggler.classList.toggle("navbarTogglerActive");
+    navbarCollapse.classList.toggle("hidden");
+  });
+
+  //===== close navbar-collapse when a  clicked
+  document
+    .querySelectorAll("#navbarCollapse ul li:not(.submenu-item) a")
+    .forEach((e) =>
+      e.addEventListener("click", () => {
+        navbarToggler.classList.remove("navbarTogglerActive");
+        navbarCollapse.classList.add("hidden");
+      })
+    );
+
+  // ===== Sub-menu
+  const submenuItems = document.querySelectorAll(".submenu-item");
+  submenuItems.forEach((el) => {
+    el.querySelector("a").addEventListener("click", () => {
+      el.querySelector(".submenu").classList.toggle("hidden");
+    });
+  });
+
+  /* ========  themeSwitcher start ========= */
+
+  // themeSwitcher
+  const themeSwitcher = document.getElementById('themeSwitcher');
+
+  // Theme Vars
+  const userTheme = localStorage.getItem('theme');
+  const systemTheme = window.matchMedia('(prefers-color0scheme: dark)').matches;
+
+  // Initial Theme Check
+  const themeCheck = () => {
+    if (userTheme === 'dark' || (!userTheme && systemTheme)) {
+      document.documentElement.classList.add('dark');
+      return;
+    }
+  };
+
+  // Manual Theme Switch
+  const themeSwitch = () => {
+    if (document.documentElement.classList.contains('dark')) {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+      return;
+    }
+
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark');
+  };
+
+  // call theme switch on clicking buttons
+  themeSwitcher.addEventListener('click', () => {
+    themeSwitch();
+  });
+
+  // invoke theme check on initial load
+  themeCheck();
+  /* ========  themeSwitcher End ========= */
+
+  // Highlight menu item on scroll
+  // ==== for menu scroll
+  const pageLink = document.querySelectorAll(".ud-menu-scroll");
+
+  pageLink.forEach((elem) => {
+    elem.addEventListener("click", (e) => {
+      e.preventDefault();
+      let element = document.querySelector(elem.getAttribute("href"));
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          offsetTop: 1 - 60,
+        });
+      }
+    });
+  });
+
+  // section menu active
+  function onScroll(event) {
+    const sections = document.querySelectorAll(".ud-menu-scroll");
+    const scrollPos =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop;
+
+    for (let i = 0; i < sections.length; i++) {
+      const currLink = sections[i];
+      const val = currLink.getAttribute("href");
+      const refElement = document.querySelector(val);
+
+      // continue if element does not exist in this page
+      if (!refElement)
+        continue;
+
+      const scrollTopMinus = scrollPos + 73;
+      if (
+        refElement.offsetTop <= scrollTopMinus &&
+        refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+      ) {
+        document
+          .querySelector(".ud-menu-scroll")
+          .classList.remove("active");
+        currLink.classList.add("active");
+      } else {
+        currLink.classList.remove("active");
+      }
+    }
+  }
+
+  window.document.addEventListener("scroll", onScroll);
 }
 
-export function bannerTemplate(headline = "Headline", message = "message") {
-  return `
+export function addBanner(selector = 'banner', headline = "Headline", message = "message") {
+  let html = `
   <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3"></div>
       <div class="container">
         <div class="flex flex-wrap items-center -mx-4">
@@ -1588,4 +1854,6 @@ export function bannerTemplate(headline = "Headline", message = "message") {
         </div>
       </div>
   `;
+
+  insertTemplate(selector, html);
 }
