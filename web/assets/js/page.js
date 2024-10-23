@@ -4,11 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
         .querySelectorAll("a")
         .forEach(a => {
             let href = a.getAttribute("href");
-            if (!href) {
-                return;
-            }
 
-            if (href === "#" || href === "javascript:void(0)") {
+            if (!href || ["#", "", "null", "undefined", "javascript:void(0)"].includes(href)) {
                 a.setAttribute("href", "coming-soon.html");
             }
         });
