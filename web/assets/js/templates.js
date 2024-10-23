@@ -598,7 +598,7 @@ export function addContact(selector = 'contact', address, email) {
             <h3 class="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
               Send us a Message
             </h3>
-            <form>
+            <form action="https://formspree.io/f/meoqoplp" method="POST">
               <div class="mb-[22px]">
                 <label for="fullName" class="mb-4 block text-sm text-body-color dark:text-dark-6">Full Name*</label>
                 <input type="text" name="fullName" placeholder="John Doe"
