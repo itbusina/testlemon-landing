@@ -15,6 +15,4 @@ document.addEventListener("DOMContentLoaded", function () {
     if (pageLoader) {
         pageLoader.classList.add('hidden');
     }
-
-    document.getElementsByName('section').forEach(e => e.setAttribute('display', ''));
 });
