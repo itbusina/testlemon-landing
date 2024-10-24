@@ -929,22 +929,28 @@ export function addPricing(selector = 'pricing') {
               </h5>
               <div class="flex flex-col gap-[14px]">
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Up to 1 User
+                  5 requests per collection
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  All UI components
+                  5 projects
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Lifetime access
+                  5 mins monitoring interval
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Free updates
+                  30 days data retention
+                </p>
+                <p class="text-base text-body-color dark:text-dark-6">
+                  No SSL & Domain monitoring
+                </p>
+                <p class="text-base text-body-color dark:text-dark-6">
+                  No notify seats
                 </p>
               </div>
             </div>
-            <a href="javascript:void(0)"
+            <a href="${vars.signInUrl}"
               class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark">
-              Purchase Now
+              Start for FREE
             </a>
           </div>
         </div>
@@ -967,22 +973,28 @@ export function addPricing(selector = 'pricing') {
               </h5>
               <div class="flex flex-col gap-[14px]">
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Up to 1 User
+                  Unlimitted requests
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  All UI components
+                  20 projects
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Lifetime access
+                  1 min monitoring interval
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Free updates
+                  30 days data retention
+                </p>
+                <p class="text-base text-body-color dark:text-dark-6">
+                  No SSL & Domain monitoring
+                </p>
+                <p class="text-base text-body-color dark:text-dark-6">
+                  3 notify seats
                 </p>
               </div>
             </div>
-            <a href="javascript:void(0)"
+            <a href="index.html#contact"
               class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark">
-              Purchase Now
+              Contact Us
             </a>
           </div>
         </div>
@@ -1009,22 +1021,28 @@ export function addPricing(selector = 'pricing') {
               </h5>
               <div class="flex flex-col gap-[14px]">
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Up to 1 User
+                  Unlimitted requests
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  All UI components
+                  100 projects
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Lifetime access
+                  30 sec monitoring interval
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Free updates
+                  90 days data retention
+                </p>
+                <p class="text-base text-body-color dark:text-dark-6">
+                  SSL & Domain monitoring
+                </p>
+                <p class="text-base text-body-color dark:text-dark-6">
+                  5 notify seats
                 </p>
               </div>
             </div>
-            <a href="javascript:void(0)"
+            <a href="index.html#contact"
               class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark">
-              Purchase Now
+              Contact Us
             </a>
           </div>
         </div>
@@ -1046,20 +1064,26 @@ export function addPricing(selector = 'pricing') {
               </h5>
               <div class="flex flex-col gap-[14px]">
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Up to 1 User
+                  Unlimitted requests
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  All UI components
+                  Unlimitted projects
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Lifetime access
+                  30 sec monitoring interval
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Free updates
+                  365 days data retention
+                </p>
+                <p class="text-base text-body-color dark:text-dark-6">
+                  SSL & Domain monitoring
+                </p>
+                <p class="text-base text-body-color dark:text-dark-6">
+                  50 notify seats
                 </p>
               </div>
             </div>
-            <a href="javascript:void(0)"
+            <a href="index.html#contact"
               class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark">
               Contact Sales
             </a>
