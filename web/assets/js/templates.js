@@ -1,4 +1,4 @@
-import { _variables as vars } from './page.js';
+import { _variables as vars } from './_variables.js';
 
 function insertTemplate(selector, html) {
   let element = document.getElementById(selector);
