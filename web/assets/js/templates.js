@@ -1218,7 +1218,7 @@ export function addHero(selector = 'home') {
               Monitor Websites, Debug APIs, Run Tests Automation
             </h1>
             <p class="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-              Empowering teams to write tests and monitor web applications easily, reliably, and cost-effectively, ensuring
+              Empowering teams to tests and monitor web applications easily, reliably, and cost-effectively, ensuring
               high-quality outcomes for all.
             </p>
             <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
