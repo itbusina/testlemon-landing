@@ -23,10 +23,10 @@ jobs:
     - name: Version assets (JS/CSS) and update HTML files
       run: |
         # Make the script executable
-        chmod +x version-assets.sh
+        chmod +x ./build/version-assets.sh
 
         # Run the versioning script
-        ./version-assets.sh
+        ./build/version-assets.sh
 
     - name: Clean up blob storage
       uses: azure/CLI@v1
