@@ -11,5 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
     // Add the 'hidden' class to the element
-    document.getElementById("pageLoader").classList.add('hidden');
+    let pageLoader = document.getElementById("pageLoader");
+    if (pageLoader) {
+        pageLoader.classList.add('hidden');
+    }
 });
