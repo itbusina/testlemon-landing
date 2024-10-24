@@ -7,6 +7,6 @@ export function _variables() {
         githubExamplesUrl: "https://github.com/itbusina/testlemon-docs/tree/main/src/examples",
         GATrackingID: "G-XXXXXX",
         companyAddress: "Lakowa 60b/11, 1th Floor, 80-769, Gdansk",
-        companyEmail: "contact@itbusina.com"
+        companyEmail: "contact@testlemon.com"
     };
 }
