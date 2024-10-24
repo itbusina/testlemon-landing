@@ -1,3 +1,5 @@
+import { _variables as vars } from './page.js';
+
 function insertTemplate(selector, html) {
   let element = document.getElementById(selector);
 
@@ -346,10 +348,10 @@ export function addFooter(selector = 'footer') {
           <div class="w-full px-4 md:w-2/3 lg:w-1/2">
             <div class="my-1">
               <div class="-mx-3 flex items-center justify-center md:justify-start">
-                <a href="https://docs.apibee.app/privacy-policy/" class="px-3 text-base text-gray-7 hover:text-white hover:underline">
+                <a href="${vars.privacyUrl}" class="px-3 text-base text-gray-7 hover:text-white hover:underline">
                   Privacy policy
                 </a>
-                <a href="https://docs.apibee.app/terms-of-use/" class="px-3 text-base text-gray-7 hover:text-white hover:underline">
+                <a href="${vars.termsUrl}" class="px-3 text-base text-gray-7 hover:text-white hover:underline">
                   Terms of service
                 </a>
               </div>
@@ -1223,13 +1225,13 @@ export function addHero(selector = 'home') {
             </p>
             <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
               <li>
-                <a href="https://apibee.app/"
+                <a href="${vars.signInUrl}"
                   class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
                   Start monitoring for FREE
                 </a>
               </li>
               <li>
-                <a href="https://github.com/itbusina/apibee-docs/tree/main/src/examples" target="_blank"
+                <a href="${vars.githubExamplesUrl}" target="_blank"
                   class="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark">
                   <svg class="fill-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
@@ -1636,10 +1638,10 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
               </span>
             </label>
             <div class="hidden sm:flex">
-              <a href="https://apibee.app/" class="loginBtn px-[22px] py-2 text-base font-medium hover:opacity-70 ${textDarkCssClass}">
+              <a href="${vars.signInUrl}" class="loginBtn px-[22px] py-2 text-base font-medium hover:opacity-70 ${textDarkCssClass}">
                 Sign In
               </a>
-              <a href="https://apibee.app/account/login" class="signUpBtn rounded-md px-6 py-2 text-base font-medium text-white duration-300 ease-in-out ${focusButtonColor}">
+              <a href="${vars.signUpUrl}" class="signUpBtn rounded-md px-6 py-2 text-base font-medium text-white duration-300 ease-in-out ${focusButtonColor}">
                 Sign Up
               </a>
             </div>
@@ -1828,7 +1830,7 @@ export function addBanner(selector = 'banner', headline = "Headline", message = 
               </p>
               <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
               <li>
-                <a href="https://apibee.app/" class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
+                <a href="${vars.signInUrl}" class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
                   ${buttonText}
                 </a>
               </li>
