@@ -1,5 +1,5 @@
-// update all links to point to coming-soon page if they are not ready yet
 document.addEventListener("DOMContentLoaded", function () {
+    // update all links to point to coming-soon page if they are not ready yet
     document
         .querySelectorAll("a")
         .forEach(a => {
@@ -9,4 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 a.setAttribute("href", "coming-soon.html");
             }
         });
+
+    // Add the 'hidden' class to the element
+    document.getElementById("pageLoader").classList.add('hidden');
 });

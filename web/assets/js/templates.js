@@ -1145,7 +1145,7 @@ export function addAbout(selector = 'about', headline = "Headline", message = "m
           <div class="w-full px-4 lg:w-1/2">
             <div class="-mx-2 flex flex-wrap sm:-mx-4 lg:-mx-2 xl:-mx-4">
               <div class="w-full px-2 sm:w-1 sm:px-4 lg:px-2 xl:px-4 mb-4 flex items-center justify-center">
-                <div class="loader primary"></div>
+                <div class="loader primary big"></div>
               </div>
             </div>
           </div>

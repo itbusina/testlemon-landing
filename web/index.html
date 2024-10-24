@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/tailwind.css" />
   <link rel="stylesheet" href="assets/css/loader.css" />
+  <link rel="stylesheet" href="assets/css/page.css" />
 
   <!-- ==== WOW JS ==== -->
   <script src="assets/js/wow.min.js"></script>
@@ -24,6 +25,10 @@
 </head>
 
 <body>
+  <div id="pageLoader" class="h-screen w-full absolute top-0 left-0 z-[999] flex items-center justify-center" style="background-color: rgb(249,250,251);">
+    <div class="loader primary small" style="display: block;"></div>
+  </div>
+
   <!-- ====== Navbar Section Start -->
   <div id="nav" class="ud-header absolute top-0 left-0 z-40 flex w-full items-center bg-transparent"></div>
   <!-- ====== Navbar Section End -->
