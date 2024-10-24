@@ -1088,8 +1088,8 @@ export function addCta(selector = 'cta', headline = "Headline", message = "messa
               <p class="mx-auto mb-6 max-w-[515px] text-base leading-[1.5] text-white">
                 No credit card required!
               </p>
-              <a href="javascript:void(0)"
-                class="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-white transition hover:bg-[#0BB489]">
+              <a href="${vars.signInUrl}"
+                class="inline-block rounded-md border border-transparent bg-secondary px-7 py-3 text-base font-medium text-dark transition hover:bg-[#0BB489]">
                 ${buttonText}
               </a>
             </div>
