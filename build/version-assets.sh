@@ -20,5 +20,8 @@ do
 
         # Replace the old filename with the new versioned filename in all HTML files
         find . -name "*.html" -exec sed -i "s/$BASENAME/$VERSIONED_FILENAME/g" {} \;
+
+        # Replace the old filename with the new versioned filename in all JS files
+        find . -name "*.js" -exec sed -i "s/$BASENAME/$VERSIONED_FILENAME/g" {} \;
     done
 done
