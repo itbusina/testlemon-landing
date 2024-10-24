@@ -123,6 +123,9 @@ export function addFooter(selector = 'footer') {
               <a href="https://x.com/TestLemonCo" class="px-3 text-gray-7 hover:text-white">
                 <i class="ph ph-x-logo"></i>  
               </a>
+              <a href="https://www.facebook.com/testlemon" class="px-3 text-gray-7 hover:text-white">
+                <i class="ph ph-facebook-logo"></i> 
+              </a>
               <a href="https://www.linkedin.com/company/itbusina/" class="px-3 text-gray-7 hover:text-white">
                 <i class="ph ph-linkedin-logo"></i>
               </a>
