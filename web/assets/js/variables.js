@@ -5,7 +5,7 @@ export function _variables() {
         signInUrl: "https://app.testlemon.com",
         signUpUrl: "https://app.testlemon.com/accounts/account/login",
         githubExamplesUrl: "https://github.com/itbusina/testlemon-docs/tree/main/src/examples",
-        GATrackingID: "G-XXXXXX",
+        GATrackingID: "G-11N6YDHGVM",
         companyAddress: "Lakowa 60b/11, 1th Floor, 80-769, Gdansk",
         companyEmail: "contact@testlemon.com"
     };
