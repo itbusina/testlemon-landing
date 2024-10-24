@@ -9,3 +9,7 @@
 footer .ph {
     font-size: 1.5em;
 }
+
+section {
+    display: none;
+}
