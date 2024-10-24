@@ -109,7 +109,7 @@ export function addFooter(selector = 'footer') {
       <div class="-mx-4 flex flex-wrap">
         <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-4/12 xl:w-4/12">
           <div class="mb-10 w-full">
-            <a href="javascript:void(0)" class="mb-6 inline-block max-w-[160px]">
+            <a href="index.html" class="mb-6 inline-block max-w-[160px]">
               <img style="height: 50px;" src="assets/images/logo/logo-white.svg" alt="logo" class="max-w-full" />
             </a>
             <p class="mb-8 max-w-[270px] text-base text-gray-7">
@@ -1032,9 +1032,8 @@ export function addPricing(selector = 'pricing') {
             </span>
             <h2 class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
               <span class="text-xl font-medium">$</span>
-              <span class="-ml-1 -tracking-[2px]">99.00</span>
+              <span class="-ml-1 -tracking-[2px]">Custom</span>
               <span class="text-base font-normal text-body-color dark:text-dark-6">
-                Per Month
               </span>
             </h2>
             <div class="mb-[50px]">
@@ -1470,7 +1469,7 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
               class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
               <ul class="blcok lg:flex 2xl:ml-20">
                 <li class="submenu-item group relative">
-                  <a href="javascript:void(0)"
+                  <a href="#testing"
                     class="flex mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
                     Testing
 
@@ -1505,7 +1504,7 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                   </div>
                 </li>
                 <li class="submenu-item group relative">
-                  <a href="javascript:void(0)"
+                  <a href="#monitoring"
                     class="flex mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
                     Monitoring
 
@@ -1559,7 +1558,7 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                   </a>
                 </li>
                 <li class="submenu-item group relative">
-                  <a href="javascript:void(0)"
+                  <a href="#resources"
                     class="flex mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
                     Resources
 
