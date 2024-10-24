@@ -901,7 +901,7 @@ export function addPricing(selector = 'pricing') {
               Pricing
             </span>
             <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-              Flexibale Plans
+              Flexible Plans
             </h2>
             <p class="text-base text-body-color dark:text-dark-6">
               Save <strong>~25%</strong> with annual billing.
