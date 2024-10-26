@@ -38,13 +38,13 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode key -d '$web' -s './web'
+          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode key -d '$web/maintenance' -s './blob/maintenance'
 
     - name: Copy to blob/web2 storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode key -d '$web/web' -s './web'
+          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode key -d '$web/web' -s './blob/web'
             
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
