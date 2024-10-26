@@ -1,0 +1,11 @@
+.h-screen {
+    height: 100vh;
+}
+
+.bg-secondary {
+    background-color: rgb(211 242 30 / var(--tw-bg-opacity)) !important;
+}
+
+footer .ph {
+    font-size: 1.5em;
+}
