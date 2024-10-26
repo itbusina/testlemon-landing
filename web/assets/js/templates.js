@@ -960,7 +960,7 @@ export function addPricing(selector = 'pricing') {
                   Unlimitted requests
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  20 projects
+                  10 projects
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
                   1 min monitoring interval
