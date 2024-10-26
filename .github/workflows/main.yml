@@ -7,8 +7,8 @@ on:
         
 env:
   STORAGE_ACCOUNT_NAME: 'apibeedb'
-  CDN_PROFILE_NAME: 'apibeecdnprofile'
-  CDN_ENDPOINT: 'apibee'
+  CDN_PROFILE_NAME: 'cdnprofile'
+  CDN_ENDPOINT: 'testlemon'
   RESOURCE_GROUP: 'apibee-rg'
   
 jobs:
@@ -39,6 +39,12 @@ jobs:
       with:
         inlineScript: |
           az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode key -d '$web' -s './web'
+
+    - name: Copy to blob/web2 storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode key -d '$web/web' -s './web'
             
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
