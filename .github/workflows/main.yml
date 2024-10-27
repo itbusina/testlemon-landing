@@ -34,13 +34,13 @@ jobs:
         inlineScript: |
           az storage blob delete-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode key -s '$web'
             
-    - name: Copy to blob storage
+    - name: Copy 'maintenance' to blob storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
           az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode key -d '$web/maintenance' -s './blob/maintenance'
 
-    - name: Copy to blob/web2 storage
+    - name: Copy 'web' to blob storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
