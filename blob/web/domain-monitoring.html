@@ -14,6 +14,11 @@
   <link rel="stylesheet" href="assets/css/animate.css" />
   <link rel="stylesheet" href="assets/css/tailwind.css" />
   <link rel="stylesheet" href="assets/css/page.css" />
+  <style>
+    .w-\[70px\] {
+      min-width: 70px;
+    }
+  </style>
 
   <!-- ==== WOW JS ==== -->
   <script src="assets/js/wow.min.js"></script>
@@ -45,8 +50,8 @@
             </p>
             <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
               <li>
-                <input type="url" id="domain" placeholder="Enter url: https://yoursite.com"
-                  class="w-[330px] h-[50px] rounded-md border border-transparent bg-white/10 text-center text-base text-white outline-none placeholder:text-white/60 focus:border-white focus-visible:shadow-none">
+                <input type="url" id="domain" placeholder="https://yoursite.com"
+                  class="h-[50px] rounded-md border border-transparent bg-white/10 text-center text-base text-white outline-none placeholder:text-white/60 focus:border-white focus-visible:shadow-none">
               </li>
               <li>
                 <button onclick="validateDomain()"
@@ -61,6 +66,11 @@
     </div>
   </section>
   <!-- ====== Banner Section End -->
+
+  <!-- ====== Results Section Start -->
+  <section id="results" class="hidden bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]">
+  </section>
+  <!-- ====== Results Section End -->
 
   <!-- ====== Features Section Start -->
   <section id="features" class="pb-8 pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px]"></section>
@@ -139,15 +149,75 @@
     };
   </script>
   <script>
+    function resultItemTemplate(isValid, validator, details) {
+      let background = isValid ? 'bg-secondary' : 'bg-[#D64937]';
+      let icon = isValid ? 'ph-check-circle' : 'ph-x-circle';
+
+      return `
+        <div class="flex items-center w-full px-4 pb-5 mb-5 border-b wow fadeInUp border-stroke dark:border-dark-3"
+          data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s;">
+          <div class="mr-5 relative z-10 flex h-[70px] w-[70px] items-center justify-center rounded-[14px] ${background}">
+            <span class="absolute left-0 top-0 -z-[1] mb-8 flex h-[70px] w-[70px] rotate-[25deg] items-center justify-center rounded-[14px] ${background} bg-opacity-20 duration-300 group-hover:rotate-45"></span>
+            <i class="ph ${icon} text-white text-[32px]"></i>
+          </div>
+          <div class="w-full">
+            <h4>
+              <span class="inline-block mb-1 text-lg font-medium leading-snug text-dark hover:text-primary dark:text-dark-6 dark:hover:text-primary lg:text-base xl:text-lg">
+                ${validator}
+              </span>
+            </h4>
+            <p class="text-sm text-body-color dark:text-dark-6" style="overflow-wrap: anywhere;">
+              ${details}
+            </p>
+          </div>
+        </div>
+        `;
+    }
+
+    function resultTemplate(items) {
+      return `
+        <div class="container">
+          <div class="flex flex-wrap mb-8 -mx-4">
+            <div class="w-full px-4">
+              <h2 class="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
+                data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s;">
+                Validation results
+              </h2>
+              <span class="mb-10 inline-block h-[2px] w-20 bg-primary"></span>
+            </div>
+
+            ${items}
+
+          </div>
+        </div>`;
+    }
+
+    function displayResult(data) {
+      let validators = data[0].testsResults[0].validators.map(validator => ({
+        name: validator.validator.name + ": " + validator.validator.value,
+        isValid: validator.result.isSuccessful,
+        details: validator.result.value || validator.result.items[0]?.value || "n/a"
+      }));
+
+      var html = validators.map(x => resultItemTemplate(x.isValid, x.name, x.details)).join("");
+
+      let element = document.getElementById("results");
+      if (element != null) {
+        element.classList.remove('hidden');
+        element.innerHTML = "";
+        element.insertAdjacentHTML('beforeend', resultTemplate(html));
+      }
+    }
+
     function validateDomain() {
-      let domain = document.getElementById("domain").value;
+      let domain = document.getElementById("domain")?.value;
 
       if (!domain || domain.trim().length === 0)
         return;
 
       fetch(`https://validate.testlemon.com/api/domain?q=${domain}`)
         .then(response => response.json())
-        .then(data => console.log(data))
+        .then(data => displayResult(data))
         .catch(error => console.error('Error:', error));
     }
   </script>
