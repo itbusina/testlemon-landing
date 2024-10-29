@@ -1116,7 +1116,7 @@ export function addCta(selector = 'cta', headline = "Headline", message = "messa
   insertTemplate(selector, html);
 }
 
-export function addAbout(selector = 'about', headline = "Headline", message = "message") {
+export function addAbout(selector = 'about', headline = "Headline", message = "message", link = "", content = "") {
   let html = `
   <div class="container">
       <div class="wow fadeInUp" data-wow-delay=".2s">
@@ -1131,7 +1131,7 @@ export function addAbout(selector = 'about', headline = "Headline", message = "m
                 ${message}
               </p>
 
-              <a href="javascript:void(0)"
+              <a href="${link}"
                 class="inline-flex items-center justify-center rounded-md border border-primary bg-primary px-7 py-3 text-center text-base font-medium text-white hover:border-blue-dark hover:bg-blue-dark">
                 Know More
               </a>
@@ -1141,7 +1141,7 @@ export function addAbout(selector = 'about', headline = "Headline", message = "m
           <div class="w-full px-4 lg:w-1/2">
             <div class="-mx-2 flex flex-wrap sm:-mx-4 lg:-mx-2 xl:-mx-4">
               <div class="w-full px-2 sm:w-1 sm:px-4 lg:px-2 xl:px-4 mb-4 flex items-center justify-center">
-                <div class="loader primary big"></div>
+                ${content}
               </div>
             </div>
           </div>
