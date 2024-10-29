@@ -145,7 +145,7 @@
       if (!domain || domain.trim().length === 0)
         return;
 
-      fetch(`https://functions.apibee.itbusina.com/api/domain?q=${domain}`)
+      fetch(`https://validate.testlemon.com/api/domain?q=${domain}`)
         .then(response => response.json())
         .then(data => console.log(data))
         .catch(error => console.error('Error:', error));
