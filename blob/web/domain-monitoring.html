@@ -28,8 +28,37 @@
   <!-- ====== Navbar Section End -->
 
   <!-- ====== Banner Section Start -->
-  <section id="banner"
+  <section id="valite-domain-banner"
     class=" bg-primary relative z-10 overflow-hidden pb-[60px] pt-[120px] dark:bg-dark md:pt-[130px] lg:pt-[160px]">
+    <div
+      class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3">
+    </div>
+    <div class="container">
+      <div class="flex flex-wrap items-center -mx-4">
+        <div class="w-full px-4">
+          <div class="text-center">
+            <h1 class="mb-4 text-3xl font-bold leading-snug text-white sm:text-4xl">
+              Stay Safe with Proactive <strong>Domain Monitoring</strong>
+            </h1>
+            <p class="mb-5 text-base font-medium text-white sm:text-lg">
+              Ensure your domains are always secure and performing optimally with our advanced monitoring tool.
+            </p>
+            <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
+              <li>
+                <input type="url" id="domain" placeholder="Enter url: https://yoursite.com"
+                  class="w-[330px] h-[50px] rounded-md border border-transparent bg-white/10 text-center text-base text-white outline-none placeholder:text-white/60 focus:border-white focus-visible:shadow-none">
+              </li>
+              <li>
+                <button onclick="validateDomain()"
+                  class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
+                  Validate domain
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
   <!-- ====== Banner Section End -->
 
@@ -108,6 +137,19 @@
         { q: "What happens if my domain goes down?", a: "You will receive immediate alerts so you can take action quickly to resolve the issue." },
       ]
     };
+  </script>
+  <script>
+    function validateDomain() {
+      let domain = document.getElementById("domain").value;
+
+      if (!domain || domain.trim().length === 0)
+        return;
+
+      fetch(`https://functions.apibee.itbusina.com/api/domain?q=${domain}`)
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error('Error:', error));
+    }
   </script>
 </body>
 
