@@ -20,7 +20,7 @@ let _vars = _variables();
 let config = window.config;
 
 addNav('nav', "lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70", "text-white dark:hidden", "text-white", "hidden", "header-logo", "bg-white bg-opacity-20 hover:bg-opacity-100 hover:text-dark")
-addBanner('banner', config.bannerHealine, config.bannerMessage, bannerButtonText);
+addBanner('banner', config.bannerHealine, config.bannerMessage, config.bannerButtonText);
 addFeatures('features', "", "", "", config.features);
 addAbout('about', config.aboutTitle, config.aboutText, config.aboutLink, config.aboutContent);
 addCta('cta', config.ctaHeadline, config.ctaMessage, config.ctaButtonText);
