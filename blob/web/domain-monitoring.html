@@ -33,29 +33,25 @@
   <!-- ====== Navbar Section End -->
 
   <!-- ====== Banner Section Start -->
-  <section id="valite-domain-banner"
+  <section id="banner"
     class=" bg-primary relative z-10 overflow-hidden pb-[60px] pt-[120px] dark:bg-dark md:pt-[130px] lg:pt-[160px]">
-    <div
-      class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-stroke/0 via-stroke to-stroke/0 dark:via-dark-3">
-    </div>
+  </section>
+  <!-- ====== Banner Section End -->
+
+  <!-- ====== Results Section Start -->
+  <section id="validation" class="bg-gray-1 pt-20 dark:bg-dark-2">
     <div class="container">
       <div class="flex flex-wrap items-center -mx-4">
         <div class="w-full px-4">
           <div class="text-center">
-            <h1 class="mb-4 text-3xl font-bold leading-snug text-white sm:text-4xl">
-              Stay Safe with Proactive <strong>Domain Monitoring</strong>
-            </h1>
-            <p class="mb-5 text-base font-medium text-white sm:text-lg">
-              Ensure your domains are always secure and performing optimally with our advanced monitoring tool.
-            </p>
-            <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
-              <li>
+            <ul class="flex flex-wrap justify-center">
+              <li class="w-full px-4 md:w-1/2 lg:w-1/3">
                 <input type="url" id="domain" placeholder="https://domain.com"
-                  class="h-[50px] rounded-md border border-transparent bg-white/10 text-center text-base text-white outline-none placeholder:text-white/60 focus:border-white focus-visible:shadow-none">
+                  class="w-full h-[50px] rounded-md  bg-transparent border border-dark text-center text-base text-dark dark:text-white outline-none placeholder:text-dark/60 focus:border-white focus-visible:shadow-none">
               </li>
-              <li>
+              <li class="w-full px-4 md:w-1/2 lg:w-1/3">
                 <button onclick="validateDomain()"
-                  class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
+                  class="w-full inline-flex items-center justify-center rounded-md bg-secondary px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
                   Validate domain
                 </button>
               </li>
@@ -63,12 +59,9 @@
           </div>
         </div>
       </div>
+      <div id="results" class="-mx-4 pt-20">
+      </div>
     </div>
-  </section>
-  <!-- ====== Banner Section End -->
-
-  <!-- ====== Results Section Start -->
-  <section id="results" class="hidden bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px]">
   </section>
   <!-- ====== Results Section End -->
 
@@ -176,8 +169,7 @@
 
     function resultTemplate(items) {
       return `
-        <div class="container">
-          <div class="flex flex-wrap mb-8 -mx-4">
+          <div class="flex flex-wrap items-center pb-8">
             <div class="w-full px-4 text-center">
               <h2 class="wow fadeInUp relative pb-5 text-2xl font-semibold text-dark dark:text-white sm:text-[28px]"
                 data-wow-delay=".1s" style="visibility: visible; animation-delay: 0.1s;">
@@ -189,7 +181,7 @@
             ${items}
 
           </div>
-        </div>`;
+          `;
     }
 
     function displayResult(data) {
@@ -203,7 +195,6 @@
 
       let element = document.getElementById("results");
       if (element != null) {
-        element.classList.remove('hidden');
         element.innerHTML = "";
         element.insertAdjacentHTML('beforeend', resultTemplate(html));
       }
