@@ -129,7 +129,7 @@ export function addFooter(selector = 'footer') {
               <a href="https://www.linkedin.com/company/itbusina/" class="px-3 text-gray-7 hover:text-white">
                 <i class="ph ph-linkedin-logo"></i>
               </a>
-              <a href="https://join.slack.com/t/itbusina/shared_invite/zt-2rue98n0h-HcfUjUgOiwz3lqXLVnBm0Q/" class="px-3 text-gray-7 hover:text-white">
+              <a href="https://join.slack.com/t/itbusina/shared_invite/zt-2uc6i7m69-6gp8IpXcgwCjerBYI12SzA/" class="px-3 text-gray-7 hover:text-white">
                 <i class="ph ph-slack-logo"></i>
               </a>
               <a href="https://www.youtube.com/@itbusina/" class="px-3 text-gray-7 hover:text-white">
