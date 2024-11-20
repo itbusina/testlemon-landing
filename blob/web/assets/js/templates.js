@@ -154,7 +154,7 @@ export function addFooter(selector = 'footer') {
               </li>
               <li>
                 <a href="api-testing.html" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
-                  APIs testing
+                  API testing
                 </a>
               </li>
               <li>
