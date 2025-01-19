@@ -6,7 +6,7 @@ export function _variables() {
         signUpUrl: "https://app.testlemon.com/account/login",
         githubExamplesUrl: "https://github.com/itbusina/testlemon-docs/tree/main/examples",
         GATrackingID: "G-11N6YDHGVM",
-        companyAddress: "Lakowa 60b/11, 1th Floor, 80-769, Gdansk",
+        companyAddress: "Lakowa 60b/11, 1th Floor, 80-769, Gdansk, Poland",
         companyEmail: "contact@testlemon.com"
     };
 }
