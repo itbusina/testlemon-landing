@@ -244,7 +244,7 @@ export function addFooter(selector = 'footer') {
             </h4>
             <ul>
               <li>
-                <a href="https://docs.testlemon.com/" target="_blank" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                <a href="https://docs.testlemon.com/pages/platform/configuration/test-collections/" target="_blank" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   Documentation
                 </a>
               </li>
