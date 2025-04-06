@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: DEBUG
-        run: echo ${{ secrets.AZURE_CREDENTIALS }}
+        run: echo '${{ secrets.AZURE_CREDENTIALS }}'
 
   deploy-to-blob:
     runs-on: ubuntu-latest
