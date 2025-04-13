@@ -1547,22 +1547,27 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                   <div
                     class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
                     <a href="jira-xray-integration.html"
+                      target="_blank"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Jira Xray integration
                     </a>
-                    <a href="javascript:void(0)"
+                    <a href="https://docs.testlemon.com/pages/platform/integrations/github-integration/"
+                      target="_blank"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       GitHub integration
                     </a>
-                    <a href="javascript:void(0)"
+                    <a href="https://docs.testlemon.com/pages/platform/integrations/openai-integration/"
+                      target="_blank"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       OpenAI integration
                     </a>
-                    <a href="javascript:void(0)"
+                    <a href="https://docs.testlemon.com/pages/platform/integrations/slack-integration/"
+                      target="_blank"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Slack integration
                     </a>
-                    <a href="javascript:void(0)"
+                    <a href="https://docs.testlemon.com/pages/platform/integrations/webhook-integration/"
+                      target="_blank"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Webhook integration
                     </a>
@@ -1579,7 +1584,6 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                   <a href="#resources"
                     class="flex mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
                     Resources
-
                     <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none"
                       xmlns="http://www.w3.org/2000/svg">
                       <path
