@@ -1211,27 +1211,24 @@ export function addHero(selector = 'home') {
             </p>
             <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
               <li>
-                <a href="${vars.signInUrl}"
-                  class="inline-flex items-center justify-center rounded-md bg-white px-7 py-[14px] text-center text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
-                  Start testing for FREE!
+                <a href="${vars.signInUrl}" target="_blank"
+                  class="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark">
+                  <i style="font-size: 24px" class="ph ph-cloud-check"></i>
+                  Cloud App
                 </a>
               </li>
               <li>
-                <a href="${vars.githubExamplesUrl}" target="_blank"
+                <a href="https://hub.docker.com/r/itbusina/testlemon" target="_blank"
                   class="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark">
-                  <svg class="fill-current" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0_2005_10818)">
-                      <path
-                        d="M12 0.674805C5.625 0.674805 0.375 5.8498 0.375 12.2998C0.375 17.3998 3.7125 21.7498 8.3625 23.3248C8.9625 23.4373 9.15 23.0623 9.15 22.7998C9.15 22.5373 9.15 21.7873 9.1125 20.7748C5.8875 21.5248 5.2125 19.1998 5.2125 19.1998C4.6875 17.8873 3.9 17.5123 3.9 17.5123C2.85 16.7623 3.9375 16.7623 3.9375 16.7623C5.1 16.7998 5.7375 17.9623 5.7375 17.9623C6.75 19.7623 8.475 19.2373 9.1125 18.8998C9.225 18.1498 9.525 17.6248 9.8625 17.3248C7.3125 17.0623 4.575 16.0498 4.575 11.6248C4.575 10.3498 5.0625 9.3373 5.775 8.5498C5.6625 8.2873 5.25 7.0873 5.8875 5.4748C5.8875 5.4748 6.9 5.1748 9.1125 6.6748C10.05 6.4123 11.025 6.2623 12.0375 6.2623C13.05 6.2623 14.0625 6.3748 14.9625 6.6748C17.175 5.2123 18.15 5.4748 18.15 5.4748C18.7875 7.0498 18.4125 8.2873 18.2625 8.5498C19.0125 9.3373 19.4625 10.3873 19.4625 11.6248C19.4625 16.0498 16.725 17.0623 14.175 17.3248C14.5875 17.6998 14.9625 18.4498 14.9625 19.4998C14.9625 21.0748 14.925 22.3123 14.925 22.6873C14.925 22.9873 15.15 23.3248 15.7125 23.2123C20.2875 21.6748 23.625 17.3623 23.625 12.2248C23.5875 5.8498 18.375 0.674805 12 0.674805Z" />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_2005_10818">
-                        <rect width="24" height="24" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                  Github examples
+                  <i style="font-size: 24px" class="ph ph-terminal-window"></i>
+                  Docker
+                </a>
+              </li>
+              <li>
+                <a href="mailto:${vars.companyEmail}?subject=TestLemon%20Contact%20Us"
+                  class="flex items-center gap-4 rounded-md bg-white px-6 py-[14px] text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
+                  <i style="font-size: 24px" class="ph ph-envelope-simple"></i>
+                  Contact us
                 </a>
               </li>
             </ul>
@@ -1239,7 +1236,6 @@ export function addHero(selector = 'home') {
               <p class="mb-4 text-center text-base font-medium text-white">
                 Currently, we executed more than <strong>1,000,000+</strong> tests.
               </p>
-
             </div>
           </div>
         </div>
@@ -1591,6 +1587,14 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                     </svg>
                   </a>
                   <div class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
+                    <a href="https://docs.testlemon.com/pages/platform/overview/features/"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Documentation
+                    </a>
+                    <a href="${vars.githubExamplesUrl}" target="_blank"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      GitHub Examples
+                    </a>
                     <a href="#"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Blog
