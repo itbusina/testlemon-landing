@@ -1,6 +1,8 @@
 # Overview
 
-This is a landing page for [TestLemon](https://testlemon.com/) website. All pages and content is located under /blob folder.
+This is a landing page for [TestLemon](https://testlemon.com/) website. 
+
+All pages and content are located under ```/blob``` and ```/build``` folders.
 
 # Template
 
