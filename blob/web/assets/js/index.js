@@ -19,7 +19,7 @@ let _vars = _variables();
 let config = window.config;
 
 addNav('nav', "lg:text-white lg:group-hover:text-white lg:group-hover:opacity-70", "text-white dark:hidden", "text-white", "hidden", "header-logo", "bg-white bg-opacity-20 hover:bg-opacity-100 hover:text-dark")
-addHero('home', 'AI-powered Test Automation', 'Website monitoring, API debugging, and test automation - easy, reliable, and cost-effective for any team.');
+addHero('home', 'AI-Powered Test Automation for Faster, Smarter, and Scalable Software Testing', 'Website monitoring, API debugging, and test automation - easy, reliable, and cost-effective for any team.');
 addFeatures('features', config.features);
 addAbout('about', config.aboutTitle, config.aboutText, config.aboutLink, config.aboutContent);
 addCta('cta', config.ctaHeadline, config.ctaMessage, config.ctaButtonText);
