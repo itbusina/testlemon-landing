@@ -1225,14 +1225,14 @@ export function addHero(selector = 'home', headline, message) {
               </li>
               <li>
                 <a href="mailto:${vars.companyEmail}?subject=TestLemon%20Contact%20Us"
-                  class="flex items-center gap-4 rounded-md bg-white px-6 py-[14px] text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-gray-2 hover:text-body-color">
+                  class="flex items-center gap-4 rounded-md bg-white px-6 py-[14px] text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-dark hover:text-white">
                   <i style="font-size: 24px" class="ph ph-envelope-simple"></i>
                   Contact us
                 </a>
               </li>
             </ul>
             <div>
-              <p class="mb-4 text-center text-base text-sm text-white">
+              <p class="mb-2 text-center text-base text-sm text-white">
                 Currently, we executed more than <strong>1,000,000+</strong> tests.
               </p>
             </div>
