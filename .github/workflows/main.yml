@@ -12,7 +12,7 @@ env:
   RESOURCE_GROUP: 'apibee-rg'
   
 jobs:
-  deploy-to-blob:
+  deploy-to-dev:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -40,11 +40,11 @@ jobs:
         inlineScript: |
           az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -d '$web/maintenance' -s './blob/maintenance'
 
-    - name: Copy 'web' to blob storage
+    - name: Copy 'web' to dev blob storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -d '$web/web' -s './blob/web'
+          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -d '$web/dev' -s './blob/web'
             
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
