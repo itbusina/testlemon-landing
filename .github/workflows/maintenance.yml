@@ -1,8 +1,11 @@
-name: Deploy to Azure Blob Storage
+name: Maintenance Deployment
 
 on:
     push:
-        branches: [ main ]
+        branches:
+            - main
+        paths:
+          - 'blob/maintenance/**'    # Only trigger if changes are made in the 'blob/maintenance' folder
     workflow_dispatch:
         
 env:
@@ -10,12 +13,14 @@ env:
   CDN_PROFILE_NAME: 'cdnprofile'
   CDN_ENDPOINT: 'testlemon'
   RESOURCE_GROUP: 'apibee-rg'
+  FOLDER_NAME: 'maintenance'
   
 jobs:
-  deploy-to-dev:
+  cdn-deployment:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+
     - uses: azure/login@v1
       with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
@@ -32,20 +37,14 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az storage blob delete-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -s '$web'
+          az storage blob delete-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -s '$web/${{ env.FOLDER_NAME }}'
             
     - name: Copy 'maintenance' to blob storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -d '$web/maintenance' -s './blob/maintenance'
+          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -d '$web/${{ env.FOLDER_NAME }}' -s './blob/${{ env.FOLDER_NAME }}'
 
-    - name: Copy 'web' to dev blob storage
-      uses: azure/CLI@v1
-      with:
-        inlineScript: |
-          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -d '$web/dev' -s './blob/web'
-            
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:

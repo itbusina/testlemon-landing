@@ -1,0 +1,58 @@
+name: Development Deployment
+
+on:
+    push:
+        branches:
+            - main
+        paths:
+          - 'blob/web/**'    # Only trigger if changes are made in the 'blob/web' folder
+    workflow_dispatch:
+        
+env:
+  STORAGE_ACCOUNT_NAME: 'apibeedb'
+  CDN_PROFILE_NAME: 'cdnprofile'
+  CDN_ENDPOINT: 'testlemon'
+  RESOURCE_GROUP: 'apibee-rg'
+  FOLDER_NAME: 'dev'
+  
+jobs:
+  cdn-deployment:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: azure/login@v1
+      with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Version assets (JS/CSS) and update HTML files
+      run: |
+        # Make the script executable
+        chmod +x ./build/version-assets.sh
+
+        # Run the versioning script
+        ./build/version-assets.sh
+
+    - name: Clean up blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az storage blob delete-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -s '$web/${{ env.FOLDER_NAME }}'
+            
+    - name: Copy 'web' to '${{ env.FOLDER_NAME }}' blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -d '$web/${{ env.FOLDER_NAME }}' -s './blob/web'
+            
+    - name: Purge CDN endpoint
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az cdn endpoint purge --content-paths  "/*" --profile-name ${{ env.CDN_PROFILE_NAME }} --name ${{ env.CDN_ENDPOINT }} --resource-group ${{ env.RESOURCE_GROUP }}
+
+  # Azure logout
+    - name: logout
+      run: |
+            az logout
+      if: always()
