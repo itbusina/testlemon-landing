@@ -148,8 +148,8 @@ export function addFooter(selector = 'footer') {
                 </a>
               </li>
               <li>
-                <a href="ai-augmented-testing.html" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
-                  AI-augmented testing
+                <a href="ai-powered-testing.html" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                  AI-powered testing
                 </a>
               </li>
               <li>
@@ -1469,9 +1469,9 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Tests automation
                     </a>
-                    <a href="ai-augmented-testing.html"
+                    <a href="ai-powered-testing.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      AI-augmented testing
+                      AI-powered testing
                     </a>
                     <a href="api-testing.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
