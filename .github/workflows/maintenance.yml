@@ -11,7 +11,7 @@ on:
 env:
   STORAGE_ACCOUNT_NAME: 'apibeedb'
   CDN_PROFILE_NAME: 'cdnprofile'
-  CDN_ENDPOINT: 'testlemon'
+  CDN_ENDPOINT: 'maintenance-testlemon'
   RESOURCE_GROUP: 'apibee-rg'
   FOLDER_NAME: 'maintenance'
   
@@ -49,7 +49,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az cdn endpoint purge --content-paths  "/${{ env.FOLDER_NAME }}/*" --profile-name ${{ env.CDN_PROFILE_NAME }} --name ${{ env.CDN_ENDPOINT }} --resource-group ${{ env.RESOURCE_GROUP }}
+          az cdn endpoint purge --content-paths  "/*" --profile-name ${{ env.CDN_PROFILE_NAME }} --name ${{ env.CDN_ENDPOINT }} --resource-group ${{ env.RESOURCE_GROUP }}
 
   # Azure logout
     - name: logout
