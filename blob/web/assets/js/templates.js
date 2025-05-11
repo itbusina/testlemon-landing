@@ -1195,7 +1195,7 @@ export function addFeatures(selector = 'features', features = []) {
   insertTemplate(selector, html);
 }
 
-export function addHero(selector = 'home') {
+export function addHero(selector = 'home', headline, message) {
   let html = `
   <div class="container">
       <div class="-mx-4 flex flex-wrap items-center">
@@ -1203,11 +1203,10 @@ export function addHero(selector = 'home') {
           <div class="hero-content wow fadeInUp mx-auto max-w-[780px] text-center" data-wow-delay=".2s">
             <h1
               class="mb-6 text-3xl font-bold leading-snug text-white sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-[1.2]">
-              Monitor Websites, Debug APIs, Run Tests Automation
+              ${headline}
             </h1>
             <p class="mx-auto mb-9 max-w-[600px] text-base font-medium text-white sm:text-lg sm:leading-[1.44]">
-              Empowering teams to test and monitor web applications easily, reliably, and cost-effectively, ensuring
-              high-quality outcomes for all.
+              ${message}
             </p>
             <ul class="mb-10 flex flex-wrap items-center justify-center gap-5">
               <li>
@@ -1218,7 +1217,7 @@ export function addHero(selector = 'home') {
                 </a>
               </li>
               <li>
-                <a href="https://hub.docker.com/r/itbusina/testlemon" target="_blank"
+                <a href="${vars.dockerUrl}" target="_blank"
                   class="flex items-center gap-4 rounded-md bg-white/[0.12] px-6 py-[14px] text-base font-medium text-white transition duration-300 ease-in-out hover:bg-white hover:text-dark">
                   <i style="font-size: 24px" class="ph ph-terminal-window"></i>
                   Docker
@@ -1233,7 +1232,7 @@ export function addHero(selector = 'home') {
               </li>
             </ul>
             <div>
-              <p class="mb-4 text-center text-base font-medium text-white">
+              <p class="mb-4 text-center text-base text-sm text-white">
                 Currently, we executed more than <strong>1,000,000+</strong> tests.
               </p>
             </div>
