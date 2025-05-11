@@ -32,13 +32,13 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az storage blob delete-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -s '$web/${{ env.FOLDER_NAME }}'
+          az storage blob delete-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login --source '$web' --pattern '${{ env.FOLDER_NAME }}/*'
             
     - name: Copy 'web' to '${{ env.FOLDER_NAME }}' blob storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -d '$web/${{ env.FOLDER_NAME }}' -s './blob/web'
+          az storage blob upload-batch --account-name ${{ env.STORAGE_ACCOUNT_NAME }} --auth-mode login -d '$web/${{ env.FOLDER_NAME }}' --source './blob/web'
             
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
