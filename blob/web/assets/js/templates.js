@@ -930,22 +930,16 @@ export function addPricing(selector = 'pricing') {
               </h5>
               <div class="flex flex-col gap-[14px]">
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Unlimitted requests
+                  30 days free trial
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  200 projects
+                  Unlimitted projects
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  30 sec monitoring interval
+                  5 min monitoring interval
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  90 days data retention
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  SSL & Domain monitoring
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  5 notify seats
+                  SSL & Domain validation
                 </p>
               </div>
             </div>
@@ -973,22 +967,16 @@ export function addPricing(selector = 'pricing') {
               </h5>
               <div class="flex flex-col gap-[14px]">
                 <p class="text-base text-body-color dark:text-dark-6">
-                  On-premise
+                  Custom domain
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
                   Unlimitted projects
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Dedicated domain
+                  30 sec monitoring interval
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
                   Priority support
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  -
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  -
                 </p>
               </div>
             </div>
