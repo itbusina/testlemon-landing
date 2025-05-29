@@ -889,10 +889,20 @@ export function addPricing(selector = 'pricing') {
               Pricing
             </span>
             <h2 class="mb-3 text-3xl font-bold text-dark dark:text-white sm:text-4xl md:text-[40px] md:leading-[1.2]">
-              Flexible Plans
+              Pricing Plans
             </h2>
-            <p class="text-base text-body-color dark:text-dark-6">
-              Save <strong>~25%</strong> with annual billing.
+            <p class="mb-3 text-base text-body-color dark:text-dark-6">
+              Save <strong>~16%</strong> with annual billing.
+            </p>
+            <p class="flex items-center justify-center my-6">
+              <label class="flex items-center cursor-pointer">
+                <input type="radio" name="plan" value="monthly" class="sr-only" checked>
+                <span class="span-monthly px-4 py-2 rounded-md dark:text-white text-white bg-primary">Monthly</span>
+              </label>
+              <label class="flex items-center cursor-pointer">
+                <input type="radio" name="plan" value="yearly" class="sr-only">
+                <span class="span-yearly px-4 py-2 rounded-md dark:text-white text-dark">Yearly</span>
+              </label>
             </p>
           </div>
         </div>
@@ -901,106 +911,17 @@ export function addPricing(selector = 'pricing') {
         <div class="w-full px-4 md:w-1/2 lg:w-1/3">
           <div
             class="relative z-10 mb-10 overflow-hidden rounded-xl bg-white px-8 py-10 shadow-pricing dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-14">
-            <span class="mb-5 block text-xl font-medium text-dark dark:text-white">
-              Starter
-            </span>
-            <h2 class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
-              <span class="text-xl font-medium">$</span>
-              <span class="-ml-1 -tracking-[2px]">0.00</span>
-              <span class="text-base font-normal text-body-color dark:text-dark-6">
-                Per Month
-              </span>
-            </h2>
-            <div class="mb-[50px]">
-              <h5 class="mb-5 text-lg font-medium text-dark dark:text-white">
-                Features
-              </h5>
-              <div class="flex flex-col gap-[14px]">
-                <p class="text-base text-body-color dark:text-dark-6">
-                  5 requests per collection
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  5 projects
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  5 mins monitoring interval
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  30 days data retention
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  No SSL & Domain monitoring
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  No notify seats
-                </p>
-              </div>
-            </div>
-            <a href="${vars.signInUrl}"
-              class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark">
-              Start for FREE
-            </a>
-          </div>
-        </div>
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div
-            class="relative z-10 mb-10 overflow-hidden rounded-xl bg-white px-8 py-10 shadow-pricing dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-14">
-            <span class="mb-5 block text-xl font-medium text-dark dark:text-white">
-              Plus
-            </span>
-            <h2 class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
-              <span class="text-xl font-medium">$</span>
-              <span class="-ml-1 -tracking-[2px]">10.00</span>
-              <span class="text-base font-normal text-body-color dark:text-dark-6">
-                Per Month
-              </span>
-            </h2>
-            <div class="mb-[50px]">
-              <h5 class="mb-5 text-lg font-medium text-dark dark:text-white">
-                Features
-              </h5>
-              <div class="flex flex-col gap-[14px]">
-                <p class="text-base text-body-color dark:text-dark-6">
-                  Unlimitted requests
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  50 projects
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  1 min monitoring interval
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  30 days data retention
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  No SSL & Domain monitoring
-                </p>
-                <p class="text-base text-body-color dark:text-dark-6">
-                  3 notify seats
-                </p>
-              </div>
-            </div>
-            <a href="index.html#contact"
-              class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark">
-              Contact Us
-            </a>
-          </div>
-        </div>
-        <div class="w-full px-4 md:w-1/2 lg:w-1/3">
-          <div
-            class="relative z-10 mb-10 overflow-hidden rounded-xl bg-white px-8 py-10 shadow-pricing dark:bg-dark-2 sm:p-12 lg:px-6 lg:py-10 xl:p-14">
-            <p
-              class="absolute right-[-50px] top-[60px] inline-block -rotate-90 rounded-bl-md rounded-tl-md bg-primary px-5 py-2 text-base font-medium text-white">
+            <!--<p class="price-recommended hidden absolute right-[-50px] top-[60px] inline-block -rotate-90 rounded-bl-md rounded-tl-md bg-primary px-5 py-2 text-base font-medium text-white">
               Recommended
-            </p>
+            </p>-->
             <span class="mb-5 block text-xl font-medium text-dark dark:text-white">
               Professional
             </span>
             <h2 class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
               <span class="text-xl font-medium">$</span>
-              <span class="-ml-1 -tracking-[2px]">30.00</span>
-              <span class="text-base font-normal text-body-color dark:text-dark-6">
-                Per Month
+              <span class="-ml-1 -tracking-[2px] price-plan-value">20.00</span>
+              <span class="text-base font-normal text-body-color dark:text-dark-6 price-plan-text">
+                / month
               </span>
             </h2>
             <div class="mb-[50px]">
@@ -1028,9 +949,9 @@ export function addPricing(selector = 'pricing') {
                 </p>
               </div>
             </div>
-            <a href="index.html#contact"
-              class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark">
-              Contact Us
+            <a href="#"
+              class="price-link inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark">
+              Subscribe Now
             </a>
           </div>
         </div>
@@ -1042,7 +963,7 @@ export function addPricing(selector = 'pricing') {
             </span>
             <h2 class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
               <span class="text-xl font-medium"></span>
-              <span class="-ml-1 -tracking-[2px]">Custom</span>
+              <span class="-ml-1 -tracking-[2px]">Contact Sales</span>
               <span class="text-base font-normal text-body-color dark:text-dark-6">
               </span>
             </h2>
@@ -1052,22 +973,22 @@ export function addPricing(selector = 'pricing') {
               </h5>
               <div class="flex flex-col gap-[14px]">
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Unlimitted requests
+                  On-premise
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
                   Unlimitted projects
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  30 sec monitoring interval
+                  Dedicated domain
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  365 days data retention
+                  Priority support
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  SSL & Domain monitoring
+                  -
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  50 notify seats
+                  -
                 </p>
               </div>
             </div>
@@ -1082,6 +1003,54 @@ export function addPricing(selector = 'pricing') {
   `;
 
   insertTemplate(selector, html);
+
+  const radios = document.querySelectorAll('input[name="plan"]');
+  const pricePlanValue = document.querySelector('.price-plan-value');
+  const pricePlanText = document.querySelector('.price-plan-text');
+  const priceLink = document.querySelector('.price-link');
+  const spanMonthly = document.querySelector('.span-monthly');
+  const spanYearly = document.querySelector('.span-yearly');
+
+  function setPriceButtonClass(span, isSelected = true) {
+    if (isSelected) {
+      span.classList.add('bg-primary', 'text-white');
+      span.classList.remove('text-dark');
+    }
+    else {
+      span.classList.remove('bg-primary', 'text-white');
+      span.classList.add('text-dark');
+    }
+  }
+
+  function setPriceButtonLink(url) {
+    priceLink.setAttribute('href', url);
+  }
+
+  // Set initial state for payment link
+  setPriceButtonLink(vars.monthlyPriceUrl);
+
+  radios.forEach(radio => {
+    radio.addEventListener('change', function () {
+      if (this.value === 'monthly') {
+        setPriceButtonClass(spanMonthly, true);
+        setPriceButtonClass(spanYearly, false);
+        setPriceButtonLink(vars.monthlyPriceUrl);
+
+        // Show monthly prices
+        pricePlanValue.textContent = '20.00';
+        pricePlanText.textContent = '/ month';
+      }
+      else {
+        setPriceButtonClass(spanMonthly, false);
+        setPriceButtonClass(spanYearly, true);
+        setPriceButtonLink(vars.yearlyPriceUrl);
+
+        // Show yearly prices
+        pricePlanValue.textContent = '200.00';
+        pricePlanText.textContent = '/ year';
+      }
+    });
+  });
 }
 
 export function addCta(selector = 'cta', headline = "Headline", message = "message", buttonText, buttonLink = vars.signInUrl) {

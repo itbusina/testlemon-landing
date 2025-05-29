@@ -8,6 +8,8 @@ export function _variables() {
         dockerUrl: "https://hub.docker.com/r/itbusina/testlemon",
         GATrackingID: "G-11N6YDHGVM",
         companyAddress: "Lakowa 60b/11, 1th Floor, 80-769, Gdansk, Poland",
-        companyEmail: "contact@testlemon.com"
+        companyEmail: "contact@testlemon.com",
+        monthlyPriceUrl: "https://buy.stripe.com/test_00w00kgte7Tkbcnaekd3i03",
+        yearlyPriceUrl: "https://buy.stripe.com/test_6oU28s0ugb5wfsD2LSd3i04",
     };
 }
