@@ -9,7 +9,7 @@ export function _variables() {
         GATrackingID: "G-11N6YDHGVM",
         companyAddress: "Lakowa 60b/11, 1th Floor, 80-769, Gdansk, Poland",
         companyEmail: "contact@testlemon.com",
-        monthlyPriceUrl: "https://buy.stripe.com/test_00w00kgte7Tkbcnaekd3i03",
-        yearlyPriceUrl: "https://buy.stripe.com/test_6oU28s0ugb5wfsD2LSd3i04",
+        monthlyPriceUrl: "https://buy.stripe.com/test_cNiaEW4WL2GR4M7cDUg3600",
+        yearlyPriceUrl: "https://buy.stripe.com/test_eVq6oG1KzgxHcezgUag3602",
     };
 }
