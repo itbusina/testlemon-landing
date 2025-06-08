@@ -1181,10 +1181,10 @@ export function addHero(selector = 'home', headline, message) {
                 </a>
               </li>
               <li>
-                <a href="mailto:${vars.companyEmail}?subject=TestLemon%20Contact%20Us"
+                <a href="${vars.monthlyPriceUrl}"
                   class="flex items-center gap-4 rounded-md bg-white px-6 py-[14px] text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-dark hover:text-white">
-                  <i style="font-size: 24px" class="ph ph-envelope-simple"></i>
-                  Contact us
+                  <i style="font-size: 24px" class="ph ph-receipt"></i>
+                  Subscribe Now
                 </a>
               </li>
             </ul>
