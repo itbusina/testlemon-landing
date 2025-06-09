@@ -880,6 +880,9 @@ export function addFaq(selector = 'faq', questions = []) {
 }
 
 export function addPricing(selector = 'pricing') {
+  const monthlyPrice = 50.00; // Monthly price
+  const yearlyPrice = 500.00; // Yearly price
+
   let html = `
   <div class="container mx-auto">
       <div class="-mx-4 flex flex-wrap">
@@ -892,7 +895,7 @@ export function addPricing(selector = 'pricing') {
               Pricing Plans
             </h2>
             <p class="mb-3 text-base text-body-color dark:text-dark-6">
-              Save <strong>~16%</strong> with annual billing.
+              Save <strong>~15%</strong> with annual billing.
             </p>
             <p class="flex items-center justify-center my-6">
               <label class="flex items-center cursor-pointer">
@@ -919,7 +922,7 @@ export function addPricing(selector = 'pricing') {
             </span>
             <h2 class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
               <span class="text-xl font-medium">$</span>
-              <span class="-ml-1 -tracking-[2px] price-plan-value">20.00</span>
+              <span class="-ml-1 -tracking-[2px] price-plan-value">${monthlyPrice}</span>
               <span class="text-base font-normal text-body-color dark:text-dark-6 price-plan-text">
                 / month
               </span>
@@ -998,7 +1001,7 @@ export function addPricing(selector = 'pricing') {
   const priceLink = document.querySelector('.price-link');
   const spanMonthly = document.querySelector('.span-monthly');
   const spanYearly = document.querySelector('.span-yearly');
-
+  
   function setPriceButtonClass(span, isSelected = true) {
     if (isSelected) {
       span.classList.add('bg-primary', 'text-white');
@@ -1025,7 +1028,7 @@ export function addPricing(selector = 'pricing') {
         setPriceButtonLink(vars.monthlyPriceUrl);
 
         // Show monthly prices
-        pricePlanValue.textContent = '20.00';
+        pricePlanValue.textContent = monthlyPrice;
         pricePlanText.textContent = '/ month';
       }
       else {
@@ -1034,7 +1037,7 @@ export function addPricing(selector = 'pricing') {
         setPriceButtonLink(vars.yearlyPriceUrl);
 
         // Show yearly prices
-        pricePlanValue.textContent = '200.00';
+        pricePlanValue.textContent = yearlyPrice;
         pricePlanText.textContent = '/ year';
       }
     });
