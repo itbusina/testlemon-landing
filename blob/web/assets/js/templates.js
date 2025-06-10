@@ -960,7 +960,7 @@ export function addPricing(selector = 'pricing') {
             </span>
             <h2 class="mb-11 text-4xl font-semibold text-dark dark:text-white xl:text-[42px] xl:leading-[1.21]">
               <span class="text-xl font-medium"></span>
-              <span class="-ml-1 -tracking-[2px]">Contact Sales</span>
+              <span class="-ml-1 -tracking-[2px]">Contact us</span>
               <span class="text-base font-normal text-body-color dark:text-dark-6">
               </span>
             </h2>
@@ -985,7 +985,7 @@ export function addPricing(selector = 'pricing') {
             </div>
             <a href="index.html#contact"
               class="inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark">
-              Contact Sales
+              Contact us
             </a>
           </div>
         </div>
