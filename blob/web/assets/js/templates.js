@@ -1391,7 +1391,7 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
   let html = `
   <div class="container">
       <div class="relative -mx-4 flex items-center justify-between">
-        <div class="w-60 max-w-full px-4">
+        <div class="w-40 max-w-full px-4">
           <a href="index.html" class="block w-full py-5 navbar-logo">
             <img src="assets/images/logo/logo.svg" alt="logo" style="height: 50px;" class="w-full ${logoCssClass}">
             <img src="assets/images/logo/logo-white.svg" alt="logo" style="height: 50px;" class="w-full ${darkLogoCssClass}">
@@ -1407,7 +1407,7 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
             </button>
             <nav id="navbarCollapse"
               class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
-              <ul class="blcok lg:flex 2xl:ml-20">
+              <ul class="blcok lg:flex">
                 <li class="submenu-item group relative">
                   <a href="#testing"
                     class="flex mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
@@ -1421,13 +1421,13 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                   </a>
                   <div
                     class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
-                    <a href="test-automation.html"
-                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
-                      Tests automation
-                    </a>
                     <a href="ai-powered-testing.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       AI-powered testing
+                    </a>
+                    <a href="test-automation.html"
+                      class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                      Tests automation
                     </a>
                     <a href="api-testing.html"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
@@ -1529,13 +1529,6 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                     </a>
                   </div>
                 </li>
-                <li class="group relative">
-                  <a href="index.html#pricing"
-                    scrollTo="#pricing"
-                    class="flex ud-menu-scroll mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
-                    Pricing
-                  </a>
-                </li>
                 <li class="submenu-item group relative">
                   <a href="#resources"
                     class="flex mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
@@ -1570,6 +1563,13 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                       Support
                     </a>
                   </div>
+                </li>
+                <li class="group relative">
+                  <a href="index.html#pricing"
+                    scrollTo="#pricing"
+                    class="flex ud-menu-scroll mx-8 py-2 text-base font-medium text-dark dark:text-white group-hover:text-primary lg:ml-7 lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 xl:ml-10 ${menuItemCssClass}">
+                    Pricing
+                  </a>
                 </li>
               </ul>
             </nav>
