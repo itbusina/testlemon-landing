@@ -941,7 +941,7 @@ export function addPricing(selector = 'pricing') {
                   30 days free trial
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Unlimitted projects
+                  20 projects
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
                   5 min monitoring interval
@@ -978,7 +978,7 @@ export function addPricing(selector = 'pricing') {
                   Custom domain
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  Unlimitted projects
+                  200 projects
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
                   30 sec monitoring interval
