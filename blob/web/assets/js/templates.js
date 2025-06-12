@@ -1049,7 +1049,7 @@ export function addPricing(selector = 'pricing') {
   });
 }
 
-export function addCta(selector = 'cta', headline = "Headline", message = "message", buttonText, buttonLink = vars.signInUrl) {
+export function addCta(selector = 'cta', headline = "Headline", message = "message", buttonText, buttonLink = vars.signUpUrl) {
   let html = `
   <div class="container mx-auto">
       <div class="relative overflow-hidden">
