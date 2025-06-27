@@ -929,7 +929,7 @@ export function addPricing(selector = 'pricing') {
               <span class="text-xl font-medium">$</span>
               <span class="-ml-1 -tracking-[2px] price-plan-value">${monthlyPrice}</span>
               <span class="text-base font-normal text-body-color dark:text-dark-6 price-plan-text">
-                /month
+                per user/month
               </span>
             </h2>
             <div class="mb-[50px]">
@@ -1034,7 +1034,7 @@ export function addPricing(selector = 'pricing') {
 
         // Show monthly prices
         pricePlanValue.textContent = monthlyPrice;
-        pricePlanText.textContent = '/month';
+        pricePlanText.textContent = ' per user/month';
       }
       else {
         setPriceButtonClass(spanMonthly, false);
@@ -1043,7 +1043,7 @@ export function addPricing(selector = 'pricing') {
 
         // Show yearly prices
         pricePlanValue.textContent = yearlyPrice;
-        pricePlanText.textContent = '/year';
+        pricePlanText.textContent = ' per user/year';
       }
     });
   });
