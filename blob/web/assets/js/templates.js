@@ -941,7 +941,7 @@ export function addPricing(selector = 'pricing') {
                   30 days free trial
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
-                  20 projects
+                  10 projects
                 </p>
                 <p class="text-base text-body-color dark:text-dark-6">
                   5 min monitoring interval
