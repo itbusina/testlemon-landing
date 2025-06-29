@@ -1186,7 +1186,7 @@ export function addHero(selector = 'home', headline, message) {
                 </a>
               </li>
               <li>
-                <a href="${vars.monthlyPriceUrl}"
+                <a href="${vars.monthlyPriceUrl}" target="_blank"
                   class="flex items-center gap-4 rounded-md bg-white px-6 py-[14px] text-base font-medium text-dark shadow-1 transition duration-300 ease-in-out hover:bg-dark hover:text-white">
                   <i style="font-size: 24px" class="ph ph-receipt"></i>
                   Subscribe Now
