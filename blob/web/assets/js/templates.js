@@ -951,7 +951,7 @@ export function addPricing(selector = 'pricing') {
                 </p>
               </div>
             </div>
-            <a href="#"
+            <a href="#" target="_blank"
               class="price-link inline-block rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white transition hover:bg-blue-dark">
               Subscribe Now
             </a>
