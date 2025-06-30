@@ -210,7 +210,7 @@ export function addFooter(selector = 'footer') {
                 </a>
               </li>
               <li>
-                <a href="index.html#pricing" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
+                <a href="pricing.html" class="mb-3 inline-block text-base text-gray-7 hover:text-primary">
                   Pricing
                 </a>
               </li>
@@ -1515,7 +1515,6 @@ export function addNav(selector = 'nav', menuItemCssClass, themeSwitcherCssClass
                   <div
                     class="submenu relative left-0 top-full hidden w-[250px] rounded-sm bg-white p-4 transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark-2 lg:invisible lg:absolute lg:top-[110%] lg:block lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full">
                     <a href="jira-xray-integration.html"
-                      target="_blank"
                       class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                       Jira Xray integration
                     </a>
